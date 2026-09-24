@@ -61,13 +61,15 @@ Ao receber uma ideia:
 
 ## Skills obrigatórias
 
-Use as skills da pasta `Skills` sempre que forem relevantes.
+Use as skills instaladas sempre que forem relevantes: `ideia-para-conceito`, `pesquisa-roteiro`, `storytelling-educativo`, `formato-iceberg`, `formato-experimento`, `titulos-thumbnails`, `hook-primeiros-30s`, `roteiro-completo`, `direcao-edicao`, `auditoria-retencao`, `qa-factual-editorial` e `pacote-publicacao`.
 
 A principal é:
 
 - `pipeline-video-master`
 
 Ela coordena as demais.
+
+Para analisar comentários colados ou exportados em CSV, use `yt-audience-insights` e leve o resultado para a `ideia-para-conceito`.
 
 ## Entrega padrão
 

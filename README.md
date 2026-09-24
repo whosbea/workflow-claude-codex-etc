@@ -19,7 +19,7 @@ O conteúdo cobre engenharia de software, pesquisa acadêmica e produção de v�
 Detalhes:
 
 - O conteúdo próprio vira symlink para o repo. As exceções são os agentes no Codex, convertidos de `.md` para `.toml` por `scripts/md-convert.awk`, e os commands, que no Codex viram skills. Arquivos gerados são cópias.
-- O nome do `.toml` vem do `name:` do frontmatter. Exemplo: `agents/youtuber-master.md` gera `youtube-master.toml`.
+- O nome do `.toml` vem do `name:` do frontmatter. Exemplo: `agents/youtube-master.md` gera `youtube-master.toml`.
 - Terceiros são baixados para `~/.local/share/workflow-ai/vendor/<id>` no commit fixado em `third-party.lock` e copiados de lá.
 - O motor da impeccable vai para `~/.impeccable/bin/<versão>/impeccable`.
 - O Graphify é instalado com `uv tool install`, e a skill dele é copiada para os dois destinos.
