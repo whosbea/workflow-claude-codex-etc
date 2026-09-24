@@ -1,0 +1,4 @@
+interface:
+  display_name: "Infraestrutura como Código"
+  short_description: "Projeta e revisa infraestrutura declarativa segura"
+  default_prompt: "Projete ou revise a infraestrutura como código indicada."

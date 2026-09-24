@@ -1,0 +1,141 @@
+# third-party.lock — fontes de terceiros instaladas pelo install.sh
+#
+# Formato: uma entrada por linha, campos separados por espaços/tabs.
+# Linhas vazias e linhas começando com # são ignoradas.
+#
+#   repo   <id>    <url-git>          <commit-sha>
+#   skill  <id>    <caminho-origem>   <nome-destino|->  <alvos>  [include=a,b/c]
+#   agent  <id>    <caminho-origem>   <nome-destino|->  <alvos>
+#   uvtool <pacote> <versão>          <repo-de-referência>
+#   engine <id>    <versão> <os-arch> <sha256> <url-https>
+#
+# <nome-destino> "-"  = usa o "name:" do frontmatter (fallback: nome da pasta/arquivo).
+#                Um nome explícito diferente do frontmatter renomeia a pasta E
+#                reescreve o "name:" do frontmatter na cópia instalada.
+# <alvos>        = claude | codex | claude,codex
+#                  claude -> ~/.claude/skills/<nome> e ~/.claude/agents/<nome>.md
+#                  codex  -> ~/.agents/skills/<nome> e ~/.codex/agents/<nome>.toml
+# include=       = copia só esses caminhos (relativos à origem) em vez da pasta toda.
+# agent .md      = claude: cópia do .md; codex: convertido para .toml.
+# agent .toml    = só codex: cópia direta (formato nativo do upstream).
+# engine         = binário pré-instalado com verificação de sha256 (ver impeccable).
+#
+# Para atualizar uma fonte: troque o SHA (git ls-remote <url> HEAD),
+# revise o diff upstream e rode ./install.sh --update.
+
+# ---------------------------------------------------------------- repos
+repo  mattpocock   https://github.com/mattpocock/skills           c55ee46073ed923f86ce59a5eb3b6d895095d1b7
+repo  emil         https://github.com/emilkowalski/skills         d16ebe60d09a5ba2afcb7054ede9d0a10c9f6128
+repo  taste        https://github.com/leonxlnx/taste-skill        c184364c58658b2f131b4ae8bd3d206cabb3deee
+repo  impeccable   https://github.com/pbakaus/impeccable          e0881d2de397d5e9761d7b35ff5017d8f5ebf69b
+repo  humanizer    https://github.com/blader/humanizer            9862685f575c65a8247f90369951df1b3416e3d6
+repo  ponytail     https://github.com/DietrichGebert/ponytail     e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156
+repo  youtube      https://github.com/sergebulaev/youtube-skills  0e0a8cae2a7c78c77f89090fe3288f86439e622b
+# Referência apenas (NÃO instalado; o conteúdo foi incorporado ao AGENTS.md):
+# repo karpathy    https://github.com/multica-ai/andrej-karpathy-skills 2c606141936f1eeef17fa3043a72095b4765b9c2
+
+# ---------------------------------------------------------------- mattpocock/skills
+skill mattpocock  skills/engineering/ask-matt                       -  claude,codex
+skill mattpocock  skills/engineering/setup-matt-pocock-skills       -  claude,codex
+skill mattpocock  skills/engineering/grill-with-docs                -  claude,codex
+skill mattpocock  skills/engineering/improve-codebase-architecture  -  claude,codex
+skill mattpocock  skills/engineering/to-spec                        -  claude,codex
+skill mattpocock  skills/engineering/to-tickets                     -  claude,codex
+skill mattpocock  skills/engineering/implement                      -  claude,codex
+skill mattpocock  skills/engineering/prototype                      -  claude,codex
+skill mattpocock  skills/engineering/diagnosing-bugs                -  claude,codex
+skill mattpocock  skills/engineering/research                       -  claude,codex
+skill mattpocock  skills/engineering/tdd                            -  claude,codex
+skill mattpocock  skills/engineering/domain-modeling                -  claude,codex
+skill mattpocock  skills/engineering/codebase-design                -  claude,codex
+skill mattpocock  skills/engineering/resolving-merge-conflicts      -  claude,codex
+# code-review só no Codex: no Claude Code conflita com o /code-review nativo.
+skill mattpocock  skills/engineering/code-review                    -  codex
+skill mattpocock  skills/productivity/grill-me                      -  claude,codex
+skill mattpocock  skills/productivity/grilling                      -  claude,codex
+skill mattpocock  skills/productivity/handoff                       -  claude,codex
+skill mattpocock  skills/productivity/teach                         -  claude,codex
+skill mattpocock  skills/productivity/wait-what                     -  claude,codex
+skill mattpocock  skills/productivity/writing-for-agents            -  claude,codex
+skill mattpocock  skills/in-progress/writing-beats                  -  claude,codex
+skill mattpocock  skills/in-progress/writing-fragments              -  claude,codex
+skill mattpocock  skills/in-progress/writing-shape                  -  claude,codex
+
+# ---------------------------------------------------------------- emilkowalski/skills
+skill emil  skills/animate                       -             claude,codex
+skill emil  skills/animate-expo                  -             claude,codex
+skill emil  skills/animation-vocabulary          -             claude,codex
+skill emil  skills/apple-design                  -             claude,codex
+skill emil  skills/ask-sonner                    -             claude,codex
+skill emil  skills/emil-design-eng               -             claude,codex
+skill emil  skills/find-animation-opportunities  -             claude,codex
+skill emil  skills/improve-animations            -             claude,codex
+skill emil  skills/mobile-native                 -             claude,codex
+skill emil  skills/pick-ui-library               -             claude,codex
+# Colide com a prototype do Matt: renomeada.
+skill emil  skills/prototype                     prototype-ui  claude,codex
+skill emil  skills/review-animations             -             claude,codex
+skill emil  skills/write-swift                   -             claude,codex
+
+# ---------------------------------------------------------------- leonxlnx/taste-skill
+# Destino = "name:" do frontmatter (ex.: soft-skill -> high-end-visual-design).
+skill taste  skills/brandkit                  -  claude,codex
+skill taste  skills/brutalist-skill           -  claude,codex
+skill taste  skills/gpt-tasteskill            -  claude,codex
+skill taste  skills/image-to-code-skill       -  claude,codex
+skill taste  skills/imagegen-frontend-mobile  -  claude,codex
+skill taste  skills/imagegen-frontend-web     -  claude,codex
+skill taste  skills/minimalist-skill          -  claude,codex
+skill taste  skills/output-skill              -  claude,codex
+skill taste  skills/redesign-skill            -  claude,codex
+skill taste  skills/soft-skill                -  claude,codex
+skill taste  skills/stitch-skill              -  claude,codex
+skill taste  skills/taste-skill-v1            -  claude,codex
+skill taste  skills/taste-skill               -  claude,codex
+
+# ---------------------------------------------------------------- pbakaus/impeccable
+# Hooks (plugin/hooks) NÃO são instalados.
+# O upstream publica uma variante por ferramenta: plugin/ usa ${CLAUDE_SKILL_DIR}
+# e /comandos; .agents/ usa <skill-base-dir> e $comandos (Codex e afins).
+skill impeccable  plugin/skills/impeccable   -  claude
+skill impeccable  .agents/skills/impeccable  -  codex
+agent impeccable  plugin/agents/impeccable-documenter.md           -  claude
+agent impeccable  plugin/agents/impeccable-finish-reviewer.md      -  claude
+# No Codex as referências da skill chamam impeccable_documenter etc. (underscore),
+# então usamos os .toml nativos do upstream em vez de converter os .md.
+agent impeccable  .agents/skills/impeccable/agents/impeccable_documenter.toml           -  codex
+agent impeccable  .agents/skills/impeccable/agents/impeccable_finish_reviewer.toml      -  codex
+# asset-producer e manual-edit-applier ficam de fora (decisão após revisão de segurança).
+#
+# Motor da impeccable: pré-instalado para a skill NUNCA baixar nada sozinha.
+# Versão = plugin/skills/impeccable/scripts/VERSION no commit fixado acima.
+# Destino = ${IMPECCABLE_HOME:-~/.impeccable}/bin/<versão>/impeccable, o cache
+# versionado que o launcher scripts/impeccable consulta antes de tentar baixar.
+# sha256 = campo "digest" da API do GitHub (gh api repos/pbakaus/impeccable/
+# releases/tags/engine-v0.1.5), NÃO o arquivo .sha256 publicado no release.
+engine impeccable  0.1.5  darwin-arm64  0d48b6e16aa97664fdbe607d5da9ae320e389a1843e0ff1328f8c2530530320d  https://github.com/pbakaus/impeccable/releases/download/engine-v0.1.5/impeccable-darwin-arm64
+engine impeccable  0.1.5  darwin-x64    153971b0c00719dff9ebac13370cb7dbbbe12838b696fbaf3f7ab0b1b3726b52  https://github.com/pbakaus/impeccable/releases/download/engine-v0.1.5/impeccable-darwin-x64
+engine impeccable  0.1.5  linux-x64     cf5231a4b1ae66996c85b033800b1dad0797e590eae2f21ef2579430af187f19  https://github.com/pbakaus/impeccable/releases/download/engine-v0.1.5/impeccable-linux-x64
+engine impeccable  0.1.5  linux-arm64   bc4fa28bc8ccbb018795a99a4ece95ada898a6f1885f14281389d0e6ef2a2f98  https://github.com/pbakaus/impeccable/releases/download/engine-v0.1.5/impeccable-linux-arm64
+
+# ---------------------------------------------------------------- blader/humanizer
+# SKILL.md não referencia scripts/ (validate-package.py é só CI do pacote).
+# agents/openai.yaml é metadado de UI do Codex; inofensivo no Claude.
+skill humanizer  .  humanizer  claude,codex  include=SKILL.md,agents/openai.yaml
+
+# ---------------------------------------------------------------- DietrichGebert/ponytail
+# Só as 3 skills de revisão. Sem hooks, plugin, ponytail, ponytail-gain, ponytail-help.
+skill ponytail  skills/ponytail-review  -  claude,codex
+skill ponytail  skills/ponytail-audit   -  claude,codex
+skill ponytail  skills/ponytail-debt    -  claude,codex
+
+# ---------------------------------------------------------------- sergebulaev/youtube-skills
+# Só yt-audience-insights, só o SKILL.md (sem lib/, scripts/ nem as outras 8 skills).
+# Roda no modo "cole os comentários/CSV", sem YOUTUBE_API_KEY. O SKILL.md cita
+# lib.YouTubeClient(), que não é instalado: o próprio texto prevê o fallback.
+skill youtube  skills/yt-audience-insights  -  claude,codex  include=SKILL.md
+
+# ---------------------------------------------------------------- Graphify (CLI Python, opcional)
+# Instalado com `uv tool install graphifyy==<versão>` se o uv existir.
+# Versão = pyproject.toml do repo em v0.9.67 (commit 4c735618f3d56fd622c2049771584621c31ba9ff).
+uvtool graphifyy  0.9.67  https://github.com/Graphify-Labs/graphify

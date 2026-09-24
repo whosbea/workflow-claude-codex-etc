@@ -1,0 +1,16 @@
+# workflow-ai.rules — instalado pelo install.sh --harden em ~/.codex/rules/.
+# Arquivo próprio: o default.rules (onde o Codex grava aprovações) não é tocado.
+#
+# Bloqueia a reinstalação/atualização da impeccable pelo agente: o motor é
+# pré-instalado com sha256 fixado (third-party.lock) e não deve ser trocado
+# sem revisão.
+#
+# Limitação: "<caminho>/impeccable hooks on" não é cobrível por prefix_rule,
+# porque o primeiro token é um caminho variável. Essa proteção fica na regra
+# do agente (agents/frontend-ux-ui.md) e, no Claude Code, no permissions.deny do settings.json.
+
+prefix_rule(
+    pattern = ["npx", "impeccable", ["install", "update"]],
+    decision = "forbidden",
+    justification = "O motor da impeccable é pré-instalado pelo install.sh com sha256 fixado; atualize pelo third-party.lock, não pelo agente.",
+)
