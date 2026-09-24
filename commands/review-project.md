@@ -1,3 +1,7 @@
+---
+description: "Faz revisão técnica crítica do projeto, cobrindo arquitetura, estrutura de pastas, qualidade do código, segurança, testes, documentação, padrões inconsistentes, overengineering e riscos de manutenção, com plano de correção priorizado. Use quando a Bea pedir revisão geral, diagnóstico, health check ou uma análise ampla do estado do projeto."
+---
+
 Revise o projeto atual de forma crítica.
 
 Use, quando fizer sentido:

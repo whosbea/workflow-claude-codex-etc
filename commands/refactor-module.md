@@ -1,3 +1,7 @@
+---
+description: "Planeja e executa refatoração segura de um módulo existente, preservando comportamento e reduzindo duplicação, acoplamento e complexidade com mudanças pequenas. Use quando a Bea pedir para refatorar, limpar, reorganizar ou simplificar código de um módulo sem mudar o que ele faz."
+---
+
 Planeje e execute uma refatoração segura no módulo indicado.
 
 Use, quando fizer sentido:

@@ -1,3 +1,7 @@
+---
+description: "Gera plano de testes e, se solicitado, implementa testes unitários, de integração, e2e, contrato e regressão compatíveis com a stack do projeto. Use quando a Bea pedir testes, plano de testes, cobertura de uma feature ou módulo, casos de erro e permissão ou teste de regressão para um bug corrigido."
+---
+
 Gere um plano de testes e, se solicitado, implemente testes compatíveis com a stack do projeto.
 
 Use:

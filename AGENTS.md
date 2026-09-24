@@ -390,6 +390,16 @@ As skills de terceiros instaladas (mattpocock, impeccable, taste, emil, humanize
 * humanizer: revisar texto que outra pessoa vai ler (ver "Texto lido por outras pessoas").
 * ponytail-review/audit/debt: achar excesso de engenharia num diff ou no repositório e listar os comentários `ponytail:` pendentes.
 
+### Quando mais de uma ferramenta serve
+
+Ordem de uso quando as ferramentas se sobrepõem:
+
+* Revisão de código: `/code-review` nativo do Claude Code (no Codex, a skill `code-review`) para bugs e aderência ao pedido → `ponytail-review` para excesso de código → `code-review-checklist` para padrões do projeto. Se tocar segurança, somar `secure-coding-checklist`.
+* Auditoria do projeto inteiro: `/review-project` para a visão geral → `improve-codebase-architecture` para oportunidades de módulos mais profundos → `ponytail-audit` para o que apagar ou simplificar.
+* Planejamento de feature: `grill-me` (ou `grill-with-docs`, se o projeto tiver `CONTEXT.md`) para alinhar e tirar ambiguidade → `/plan-feature` para escopo, segurança, testes e critérios de aceite → `to-tickets` se precisar quebrar em tarefas. `to-spec` só com issue tracker configurado.
+* Testes: `test-plan-generator` ou `/generate-tests` para decidir o que testar → `tdd` para implementar em ciclo red-green-refactor, pelo agente `test-engineer` (implementação sempre delegada, ver regra de delegação).
+* Navegador: Playwright MCP para verificação reproduzível de interface (screenshots, viewports, estados) → navegador real da Bea (Claude in Chrome ou equivalente) só quando precisar da sessão logada dela.
+
 ### code-review-checklist
 
 Use para revisar código com foco em:

@@ -1,3 +1,7 @@
+---
+description: "Planeja uma feature antes de implementar, cobrindo entendimento, escopo essencial e fora de escopo, impacto em backend, frontend e segurança, plano de testes, critérios de aceite e ordem de implementação. Use quando a Bea pedir para planejar, quebrar em tarefas, definir escopo ou montar plano técnico de uma funcionalidade nova."
+---
+
 Planeje a feature solicitada antes de implementar.
 
 Use, quando fizer sentido:

@@ -1,3 +1,7 @@
+---
+description: "Cria ou revisa documentação de projeto, módulo, API ou feature, como README, guia de setup, ADR, changelog, guia de contribuição, manual de usuário, arquitetura e deploy. Use quando a Bea pedir para documentar algo, escrever ou atualizar README, criar ADR, changelog, docs de API ou instruções de instalação e deploy."
+---
+
 Crie ou revise documentação para o projeto, módulo, API ou feature indicada.
 
 Use:

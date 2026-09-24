@@ -1,3 +1,7 @@
+---
+description: "Faz auditoria defensiva de segurança no projeto ou trecho indicado, cobrindo autenticação, autorização, validação de entrada, secrets, dados sensíveis, dependências e riscos OWASP e LGPD. Use quando a Bea pedir auditoria de segurança, revisão de segurança, checar vulnerabilidades, secrets expostos, controle de acesso ou conformidade LGPD; não use para testes ofensivos."
+---
+
 Faça uma auditoria de segurança defensiva no projeto ou trecho indicado.
 
 Use:
