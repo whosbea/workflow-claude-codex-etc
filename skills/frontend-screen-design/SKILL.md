@@ -1,56 +1,56 @@
 ---
 name: frontend-screen-design
-description: Use esta skill para criar ou revisar telas com foco em UX/UI, responsividade, acessibilidade, hierarquia visual, estados de tela e fluxo do usuário.
+description: Use this skill to create or review screens with a focus on UX/UI, responsiveness, accessibility, visual hierarchy, screen states and user flow.
 ---
 
 # Frontend Screen Design
 
-Use esta skill para projetar ou revisar telas.
+Use this skill to design or review screens.
 
-## 1. Objetivo da tela
-- Qual problema a tela resolve?
-- Quem usa essa tela?
-- Qual é a ação principal?
-- Qual é a ação secundária?
+## 1. Screen goal
+- What problem does the screen solve?
+- Who uses this screen?
+- What is the primary action?
+- What is the secondary action?
 
-## 2. Hierarquia visual
-- O título é claro?
-- A ação principal está visível?
-- Informações importantes aparecem primeiro?
-- Há poluição visual?
+## 2. Visual hierarchy
+- Is the title clear?
+- Is the primary action visible?
+- Does important information appear first?
+- Is there visual clutter?
 
 ## 3. Layout
-- Funciona bem no celular?
-- Funciona bem no desktop?
-- Espaçamentos são consistentes?
-- Componentes estão alinhados?
+- Does it work well on mobile?
+- Does it work well on desktop?
+- Is spacing consistent?
+- Are components aligned?
 
-## 4. Estados
-A tela precisa considerar:
+## 4. States
+The screen must account for:
 - Loading.
-- Erro.
-- Vazio.
-- Sucesso.
-- Permissão negada.
-- Dados parciais.
-- Formulário inválido.
+- Error.
+- Empty.
+- Success.
+- Permission denied.
+- Partial data.
+- Invalid form.
 
-## 5. Acessibilidade
-- Texto tem contraste?
-- Botões têm rótulos claros?
-- Inputs têm labels?
-- Navegação por teclado faz sentido?
-- Feedback não depende só de cor?
+## 5. Accessibility
+- Does text have enough contrast?
+- Do buttons have clear labels?
+- Do inputs have labels?
+- Does keyboard navigation make sense?
+- Does feedback avoid relying on color alone?
 
 ## 6. Microcopy
-- Mensagens são claras?
-- Erros dizem como corrigir?
-- Textos evitam ambiguidade?
+- Are messages clear?
+- Do errors say how to fix them?
+- Does the text avoid ambiguity?
 
-## Saída esperada
-Responda com:
-1. Objetivo da tela.
-2. Estrutura visual recomendada.
-3. Estados necessários.
-4. Pontos de UX.
-5. Sugestão de implementação compatível com o projeto.
+## Expected output
+Respond with:
+1. Screen goal.
+2. Recommended visual structure.
+3. Required states.
+4. UX points.
+5. Implementation suggestion compatible with the project.

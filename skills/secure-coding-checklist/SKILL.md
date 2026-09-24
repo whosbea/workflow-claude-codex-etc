@@ -1,56 +1,56 @@
 ---
 name: secure-coding-checklist
-description: Use esta skill para revisar segurança de código, APIs, permissões, validação, autenticação, autorização, dados sensíveis, logs, secrets e dependências.
+description: Use this skill to review the security of code, APIs, permissions, validation, authentication, authorization, sensitive data, logs, secrets and dependencies.
 ---
 
 # Secure Coding Checklist
 
-Use esta checklist em revisões de segurança defensiva.
+Use this checklist in defensive security reviews.
 
-## 1. Entrada de dados
-- Toda entrada é validada?
-- Tipos, tamanhos e formatos são verificados?
-- Dados externos são tratados como não confiáveis?
+## 1. Data input
+- Is every input validated?
+- Are types, sizes and formats checked?
+- Is external data treated as untrusted?
 
-## 2. Autenticação
-- O fluxo de login é seguro?
-- Tokens são tratados corretamente?
-- Sessões expiram?
-- Secrets não aparecem no código?
+## 2. Authentication
+- Is the login flow secure?
+- Are tokens handled correctly?
+- Do sessions expire?
+- Are secrets kept out of the code?
 
-## 3. Autorização
-- O usuário só acessa o que pode?
-- Há risco de IDOR?
-- Permissões são verificadas no backend?
-- Rotas sensíveis têm proteção?
+## 3. Authorization
+- Can users access only what they are allowed to?
+- Is there an IDOR risk?
+- Are permissions checked in the backend?
+- Are sensitive routes protected?
 
-## 4. Dados sensíveis
-- Dados pessoais são minimizados?
-- Logs expõem informação sensível?
-- Erros retornam detalhes internos?
-- Existe risco de vazamento?
+## 4. Sensitive data
+- Is personal data minimized?
+- Do logs expose sensitive information?
+- Do errors return internal details?
+- Is there a risk of data leakage?
 
-## 5. Banco e queries
-- Queries usam parâmetros?
-- Há risco de injeção?
-- Filtros respeitam o usuário autenticado?
+## 5. Database and queries
+- Do queries use parameters?
+- Is there an injection risk?
+- Do filters respect the authenticated user?
 
-## 6. Uploads e arquivos
-- Tipo e tamanho são validados?
-- Nomes de arquivo são tratados?
-- Arquivos públicos não expõem dados privados?
+## 6. Uploads and files
+- Are type and size validated?
+- Are file names sanitized?
+- Do public files avoid exposing private data?
 
-## 7. Dependências e configuração
-- Dependências são necessárias?
-- Existem pacotes suspeitos?
-- Configuração de CORS, rate limit e ambiente está segura?
+## 7. Dependencies and configuration
+- Are the dependencies necessary?
+- Are there suspicious packages?
+- Are CORS, rate limiting and environment settings secure?
 
-## Saída esperada
-Classifique achados em:
-- Crítico.
-- Alto.
-- Médio.
-- Baixo.
-- Recomendação.
+## Expected output
+Classify findings as:
+- Critical.
+- High.
+- Medium.
+- Low.
+- Recommendation.
 
-Sempre explique impacto e mitigação.
+Always explain impact and mitigation.

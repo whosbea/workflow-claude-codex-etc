@@ -1,15 +1,15 @@
 ---
 name: ci-cd-pipeline
-description: Projete, implemente ou revise pipelines de integração, entrega e deploy contínuos em GitHub Actions, GitLab CI, Jenkins, Azure DevOps ou equivalentes. Use em pedidos sobre build, testes, artefatos, releases, ambientes, aprovações, deploy, rollback, caches ou segurança da cadeia de entrega.
+description: Design, implement or review continuous integration, delivery and deployment pipelines in GitHub Actions, GitLab CI, Jenkins, Azure DevOps or equivalents. Use for requests about builds, tests, artifacts, releases, environments, approvals, deploys, rollback, caches or delivery supply chain security.
 ---
 
-# Pipeline CI/CD
+# CI/CD Pipeline
 
-1. Mapeie gatilhos, branches, ambientes, artefatos, dependências, testes, deploy atual e requisitos de aprovação.
-2. Organize etapas explícitas para lint, testes, build, análise, empacotamento, publicação, deploy e verificação conforme necessário.
-3. Fixe versões de actions e imagens quando isso reduzir risco; trate dependências, artefatos e entradas externas como não confiáveis.
-4. Use credenciais temporárias ou identidade federada quando disponível. Restrinja tokens e ambientes pelo menor privilégio e nunca exponha secrets em logs.
-5. Evite duplicação com reutilização proporcional. Use cache somente com chaves e invalidação corretas; não confunda cache com artefato.
-6. Separe deploy de produção com proteções adequadas. Defina estratégia, health checks, timeout, rollback e tratamento de execução parcial.
-7. Não dispare release ou deploy real sem pedido explícito e confirmação do repositório, ambiente e versão.
-8. Valide sintaxe e comportamento seguro; entregue fluxo, mudanças, riscos, rollback e como testar.
+1. Map triggers, branches, environments, artifacts, dependencies, tests, the current deploy process and approval requirements.
+2. Organize explicit stages for lint, tests, build, analysis, packaging, publishing, deploy and verification as needed.
+3. Pin versions of actions and images when that reduces risk; treat dependencies, artifacts and external inputs as untrusted.
+4. Use temporary credentials or federated identity when available. Restrict tokens and environments by least privilege and never expose secrets in logs.
+5. Avoid duplication with proportional reuse. Use caching only with correct keys and invalidation; do not confuse cache with artifacts.
+6. Keep production deploys separate, with appropriate protections. Define strategy, health checks, timeout, rollback and handling of partial runs.
+7. Do not trigger a real release or deploy without an explicit request and confirmation of the repository, environment and version.
+8. Validate syntax and safe behavior; deliver the flow, changes, risks, rollback and how to test.

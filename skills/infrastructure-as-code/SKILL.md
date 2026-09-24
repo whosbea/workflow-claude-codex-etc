@@ -1,15 +1,15 @@
 ---
 name: infrastructure-as-code
-description: Projete, implemente ou revise infraestrutura como código com Terraform, OpenTofu, CloudFormation, Pulumi, Ansible ou ferramentas equivalentes. Use em pedidos sobre módulos, ambientes, estado remoto, redes, IAM, containers, cloud, drift, planos ou revisão de mudanças de infraestrutura.
+description: Design, implement or review infrastructure as code with Terraform, OpenTofu, CloudFormation, Pulumi, Ansible or equivalent tools. Use for requests about modules, environments, remote state, networking, IAM, containers, cloud, drift, plans or reviews of infrastructure changes.
 ---
 
-# Infraestrutura como código
+# Infrastructure as Code
 
-1. Identifique ferramenta, provedor, ambientes, estado atual, convenções e restrições antes de propor código.
-2. Modele recursos de forma declarativa, idempotente, reproduzível e proporcional ao projeto.
-3. Separe configuração por ambiente sem duplicação excessiva. Proteja state, locks, credenciais e dados sensíveis.
-4. Aplique menor privilégio em IAM, redes e acesso a secrets. Não grave secrets em código, state exposto, logs ou exemplos.
-5. Avalie dependências, drift, importação de recursos existentes, impacto financeiro e risco de indisponibilidade.
-6. Antes de `apply`, `destroy`, importação ou migração, apresente o plano, o alvo exato, as mudanças destrutivas, a validação e o rollback; execute apenas com autorização explícita.
-7. Valide formatação, sintaxe e plano usando as ferramentas do projeto. Não trate um plano como garantia absoluta.
-8. Entregue arquivos alterados, decisões, evidências de validação, impacto, rollback e pendências.
+1. Identify the tool, provider, environments, current state, conventions and constraints before proposing code.
+2. Model resources declaratively, idempotently, reproducibly and in proportion to the project.
+3. Separate configuration per environment without excessive duplication. Protect state, locks, credentials and sensitive data.
+4. Apply least privilege to IAM, networking and secret access. Do not write secrets to code, exposed state, logs or examples.
+5. Assess dependencies, drift, import of existing resources, cost impact and risk of downtime.
+6. Before `apply`, `destroy`, an import or a migration, present the plan, the exact target, the destructive changes, the validation and the rollback; run it only with explicit authorization.
+7. Validate formatting, syntax and the plan using the project's tools. Do not treat a plan as an absolute guarantee.
+8. Deliver changed files, decisions, validation evidence, impact, rollback and open items.

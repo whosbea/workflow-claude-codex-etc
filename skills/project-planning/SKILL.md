@@ -1,58 +1,58 @@
 ---
 name: project-planning
-description: Use esta skill para planejar projetos, features, tarefas, fases, escopo, riscos, critérios de aceite e ordem lógica de execução.
+description: Use this skill to plan projects, features, tasks, phases, scope, risks, acceptance criteria and a logical order of execution.
 ---
 
 # Project Planning
 
-Use esta skill para planejar projetos e features.
+Use this skill to plan projects and features.
 
-## 1. Contexto
-Identifique:
-- Objetivo.
-- Problema.
-- Público.
-- Restrições.
-- Stack existente.
-- Prazo, se houver.
+## 1. Context
+Identify:
+- Goal.
+- Problem.
+- Audience.
+- Constraints.
+- Existing stack.
+- Deadline, if any.
 
-## 2. Escopo
-Separe:
-- Essencial.
-- Importante.
-- Opcional.
-- Fora de escopo.
+## 2. Scope
+Separate into:
+- Essential.
+- Important.
+- Optional.
+- Out of scope.
 
-## 3. Fases
-Organize em:
+## 3. Phases
+Organize into:
 - Setup.
-- Base estrutural.
-- Funcionalidades principais.
-- Validações.
-- Testes.
-- Documentação.
-- Revisão final.
+- Structural foundation.
+- Core features.
+- Validations.
+- Tests.
+- Documentation.
+- Final review.
 
-## 4. Tarefas
-Cada tarefa deve ter:
-- Descrição.
-- Critério de aceite.
-- Dependências.
-- Risco.
-- Ordem de execução.
+## 4. Tasks
+Each task must have:
+- Description.
+- Acceptance criterion.
+- Dependencies.
+- Risk.
+- Execution order.
 
-## 5. Riscos
-Avalie:
-- Técnico.
-- Produto.
-- Segurança.
-- Prazo.
-- Manutenção.
+## 5. Risks
+Assess:
+- Technical.
+- Product.
+- Security.
+- Schedule.
+- Maintenance.
 
-## Saída esperada
-Responda com:
-1. Resumo do plano.
-2. Fases.
-3. To-do list ordenada.
-4. Critérios de aceite.
-5. Riscos e mitigação.
+## Expected output
+Respond with:
+1. Plan summary.
+2. Phases.
+3. Ordered to-do list.
+4. Acceptance criteria.
+5. Risks and mitigation.

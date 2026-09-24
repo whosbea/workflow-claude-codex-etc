@@ -1,10 +1,10 @@
 ---
-description: "Planeja uma feature antes de implementar, cobrindo entendimento, escopo essencial e fora de escopo, impacto em backend, frontend e segurança, plano de testes, critérios de aceite e ordem de implementação. Use quando a Bea pedir para planejar, quebrar em tarefas, definir escopo ou montar plano técnico de uma funcionalidade nova."
+description: "Plans a feature before implementing it, covering understanding, essential and out-of-scope items, backend, frontend and security impact, test plan, acceptance criteria and implementation order. Use when Bea asks to plan, break down into tasks, define scope or build a technical plan for a new feature."
 ---
 
-Planeje a feature solicitada antes de implementar.
+Plan the requested feature before implementing it.
 
-Use, quando fizer sentido:
+Use, when it makes sense:
 - product-strategist
 - software-architect
 - backend-engineer
@@ -16,18 +16,18 @@ Use, quando fizer sentido:
 - frontend-screen-design
 - test-plan-generator
 
-Entregue:
-1. Entendimento da feature.
-2. Escopo essencial.
-3. Fora de escopo.
-4. Impacto no backend.
-5. Impacto no frontend.
-6. Impacto em segurança.
-7. Plano de testes.
-8. To-do list em ordem lógica.
-9. Critérios de aceite.
+Deliver:
+1. Understanding of the feature.
+2. Essential scope.
+3. Out of scope.
+4. Backend impact.
+5. Frontend impact.
+6. Security impact.
+7. Test plan.
+8. To-do list in logical order.
+9. Acceptance criteria.
 
-Não implemente antes de apresentar o plano, salvo se o usuário pedir explicitamente.
+Do not implement before presenting the plan, unless the user explicitly asks you to.
 
-Argumentos do usuário:
+User arguments:
 $ARGUMENTS

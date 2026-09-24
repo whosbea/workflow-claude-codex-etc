@@ -1,4 +1,4 @@
 interface:
-  display_name: "Pipeline CI/CD"
-  short_description: "Projeta e revisa pipelines de integração e entrega"
-  default_prompt: "Projete ou revise o pipeline de CI/CD indicado."
+  display_name: "CI/CD Pipeline"
+  short_description: "Designs and reviews integration and delivery pipelines"
+  default_prompt: "Design or review the specified CI/CD pipeline."

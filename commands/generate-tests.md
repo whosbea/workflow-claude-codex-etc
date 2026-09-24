@@ -1,31 +1,31 @@
 ---
-description: "Gera plano de testes e, se solicitado, implementa testes unitários, de integração, e2e, contrato e regressão compatíveis com a stack do projeto. Use quando a Bea pedir testes, plano de testes, cobertura de uma feature ou módulo, casos de erro e permissão ou teste de regressão para um bug corrigido."
+description: "Generates a test plan and, if requested, implements unit, integration, e2e, contract and regression tests compatible with the project's stack. Use when Bea asks for tests, a test plan, coverage of a feature or module, error and permission cases, or a regression test for a fixed bug."
 ---
 
-Gere um plano de testes e, se solicitado, implemente testes compatíveis com a stack do projeto.
+Generate a test plan and, if requested, implement tests compatible with the project's stack.
 
 Use:
 - test-engineer
 - test-plan-generator
 
-Analise:
-1. Feature ou módulo alvo.
-2. Regras de negócio.
-3. Cenários felizes.
-4. Cenários de erro.
-5. Permissões.
-6. Validações.
-7. Regressões prováveis.
-8. Testes unitários.
-9. Testes de integração.
-10. Testes e2e.
+Analyze:
+1. Target feature or module.
+2. Business rules.
+3. Happy paths.
+4. Error scenarios.
+5. Permissions.
+6. Validations.
+7. Likely regressions.
+8. Unit tests.
+9. Integration tests.
+10. E2E tests.
 
-Entregue:
-- Plano de testes.
-- Lista de cenários.
-- Prioridade.
-- Arquivos que devem ser criados ou alterados.
-- Implementação, apenas se o usuário pedir.
+Deliver:
+- Test plan.
+- List of scenarios.
+- Priority.
+- Files to create or change.
+- Implementation, only if the user asks for it.
 
-Argumentos do usuário:
+User arguments:
 $ARGUMENTS

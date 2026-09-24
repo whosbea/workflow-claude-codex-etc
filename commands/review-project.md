@@ -1,10 +1,10 @@
 ---
-description: "Faz revisão técnica crítica do projeto, cobrindo arquitetura, estrutura de pastas, qualidade do código, segurança, testes, documentação, padrões inconsistentes, overengineering e riscos de manutenção, com plano de correção priorizado. Use quando a Bea pedir revisão geral, diagnóstico, health check ou uma análise ampla do estado do projeto."
+description: "Runs a critical technical review of the project, covering architecture, folder structure, code quality, security, tests, documentation, inconsistent patterns, overengineering and maintenance risks, with a prioritized remediation plan. Use when Bea asks for a general review, a diagnosis, a health check or a broad analysis of the project's state."
 ---
 
-Revise o projeto atual de forma crítica.
+Critically review the current project.
 
-Use, quando fizer sentido:
+Use, when it makes sense:
 - software-architect
 - security-reviewer
 - test-engineer
@@ -12,23 +12,23 @@ Use, quando fizer sentido:
 - code-review-checklist
 - secure-coding-checklist
 
-Analise:
-1. Arquitetura geral.
-2. Estrutura de pastas.
-3. Qualidade do código.
-4. Segurança.
-5. Testes.
-6. Documentação.
-7. Padrões inconsistentes.
+Analyze:
+1. Overall architecture.
+2. Folder structure.
+3. Code quality.
+4. Security.
+5. Tests.
+6. Documentation.
+7. Inconsistent patterns.
 8. Overengineering.
-9. Riscos de manutenção.
+9. Maintenance risks.
 
-Entregue:
-- Resumo executivo.
-- Problemas críticos.
-- Problemas importantes.
-- Melhorias opcionais.
-- Plano de correção em ordem lógica.
+Deliver:
+- Executive summary.
+- Critical problems.
+- Important problems.
+- Optional improvements.
+- Remediation plan in logical order.
 
-Argumentos do usuário:
+User arguments:
 $ARGUMENTS

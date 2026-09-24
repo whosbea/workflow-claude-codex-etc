@@ -1,51 +1,51 @@
 ---
 name: test-plan-generator
-description: Use esta skill para gerar plano de testes unitários, integração, e2e, contrato e regressão para uma feature ou módulo.
+description: Use this skill to generate a test plan covering unit, integration, e2e, contract and regression tests for a feature or module.
 ---
 
 # Test Plan Generator
 
-Use esta skill para transformar uma feature em plano de testes.
+Use this skill to turn a feature into a test plan.
 
-## 1. Entendimento
-Identifique:
-- O comportamento esperado.
-- A regra de negócio.
-- Entradas válidas.
-- Entradas inválidas.
-- Permissões envolvidas.
-- Dependências externas.
+## 1. Understanding
+Identify:
+- The expected behavior.
+- The business rule.
+- Valid inputs.
+- Invalid inputs.
+- Permissions involved.
+- External dependencies.
 
-## 2. Cenários
-Cubra:
-- Caminho feliz.
-- Validação.
-- Recurso inexistente.
-- Usuário sem permissão.
-- Estado vazio.
-- Erro externo.
-- Regressões prováveis.
+## 2. Scenarios
+Cover:
+- Happy path.
+- Validation.
+- Nonexistent resource.
+- User without permission.
+- Empty state.
+- External error.
+- Likely regressions.
 
-## 3. Tipos de teste
-Sugira:
-- Unitários.
-- Integração.
+## 3. Test types
+Suggest:
+- Unit.
+- Integration.
 - E2E.
-- Contrato.
-- Regressão.
+- Contract.
+- Regression.
 
-## 4. Qualidade
-Cada teste deve ter:
-- Nome claro.
+## 4. Quality
+Each test must have:
+- A clear name.
 - Arrange, Act, Assert.
-- Dado de entrada.
-- Resultado esperado.
-- Motivo de existir.
+- Input data.
+- Expected result.
+- A reason to exist.
 
-## Saída esperada
-Responda com:
-1. Plano geral.
-2. Tabela de cenários.
-3. Testes prioritários.
-4. Casos de borda.
-5. Sugestão de implementação.
+## Expected output
+Respond with:
+1. Overall plan.
+2. Scenario table.
+3. Priority tests.
+4. Edge cases.
+5. Implementation suggestion.

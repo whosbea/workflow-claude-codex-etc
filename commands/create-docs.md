@@ -1,8 +1,8 @@
 ---
-description: "Cria ou revisa documentação de projeto, módulo, API ou feature, como README, guia de setup, ADR, changelog, guia de contribuição, manual de usuário, arquitetura e deploy. Use quando a Bea pedir para documentar algo, escrever ou atualizar README, criar ADR, changelog, docs de API ou instruções de instalação e deploy."
+description: "Creates or reviews documentation for a project, module, API or feature, such as a README, setup guide, ADR, changelog, contributing guide, user manual, architecture and deploy docs. Use when Bea asks to document something, write or update a README, create an ADR, a changelog, API docs or installation and deploy instructions."
 ---
 
-Crie ou revise documentação para o projeto, módulo, API ou feature indicada.
+Create or review documentation for the specified project, module, API or feature.
 
 Use:
 - documentation-writer
@@ -11,29 +11,29 @@ Use:
 - frontend-ux-ui
 - product-strategist
 
-Tipos possíveis:
+Possible types:
 - README.
-- Guia de setup.
-- Documentação de API.
+- Setup guide.
+- API documentation.
 - ADR.
 - Changelog.
-- Guia de contribuição.
-- Manual de usuário.
-- Documentação de arquitetura.
+- Contributing guide.
+- User manual.
+- Architecture documentation.
 
-Entregue documentação clara, objetiva e útil.
+Deliver clear, objective and useful documentation.
 
-Inclua:
-1. Objetivo.
-2. Pré-requisitos.
-3. Como rodar.
-4. Estrutura.
-5. Principais comandos.
-6. Variáveis de ambiente, se houver.
-7. Fluxos importantes.
-8. Decisões técnicas.
-9. Problemas conhecidos.
-10. Próximos passos.
+Include:
+1. Goal.
+2. Prerequisites.
+3. How to run.
+4. Structure.
+5. Main commands.
+6. Environment variables, if any.
+7. Important flows.
+8. Technical decisions.
+9. Known issues.
+10. Next steps.
 
-Argumentos do usuário:
+User arguments:
 $ARGUMENTS

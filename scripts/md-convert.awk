@@ -165,7 +165,7 @@ END {
             sub(/^#+[ \t]*/, "", desc)
             desc = trim(desc)
         }
-        desc = desc " Equivale ao comando /" name " do Claude Code; use quando o usuário pedir " name "."
+        desc = desc " Equivalent to the /" name " command in Claude Code; use when the user asks for " name "."
         print "---"
         print "name: " name
         print "description: \"" esc(desc) "\""
@@ -177,7 +177,7 @@ END {
         }
         for (i = bfirst; i <= blast; i++) {
             line = body[i]
-            gsub(/\$ARGUMENTS/, "(o pedido do usuário na mensagem que acionou esta skill)", line)
+            gsub(/\$ARGUMENTS/, "(the user request in the message that triggered this skill)", line)
             print line
         }
         exit 0

@@ -1,56 +1,56 @@
 ---
 name: api-design-pattern
-description: Use esta skill para projetar ou revisar APIs de forma previsível, segura, documentada e consistente, independente de tecnologia.
+description: Use this skill to design or review APIs so they are predictable, secure, documented and consistent, regardless of technology.
 ---
 
 # API Design Pattern
 
-Use esta skill para projetar ou revisar APIs.
+Use this skill to design or review APIs.
 
-## 1. Recursos e rotas
-- Rotas representam recursos claros?
-- Nomes são consistentes?
-- Verbos HTTP foram usados corretamente?
-- Existe versionamento quando necessário?
+## 1. Resources and routes
+- Do routes represent clear resources?
+- Are names consistent?
+- Are HTTP verbs used correctly?
+- Is there versioning when needed?
 
-## 2. Contratos
-- Entrada e saída têm contrato claro?
-- Campos obrigatórios e opcionais estão definidos?
-- Existem exemplos?
-- A resposta é previsível?
+## 2. Contracts
+- Do input and output have a clear contract?
+- Are required and optional fields defined?
+- Are there examples?
+- Is the response predictable?
 
-## 3. Status HTTP
-- Sucesso usa status adequado?
-- Erros usam status adequado?
-- Validação retorna erro claro?
-- Recurso não encontrado é tratado?
+## 3. HTTP status codes
+- Does success use the appropriate status?
+- Do errors use the appropriate status?
+- Does validation return a clear error?
+- Is "resource not found" handled?
 
-## 4. Paginação, filtro e ordenação
-- Listagens têm paginação?
-- Filtros são documentados?
-- Ordenação é previsível?
-- Há limite para evitar abuso?
+## 4. Pagination, filtering and sorting
+- Do list endpoints have pagination?
+- Are filters documented?
+- Is sorting predictable?
+- Is there a limit to prevent abuse?
 
-## 5. Segurança
-- Autenticação é exigida onde precisa?
-- Autorização é aplicada no backend?
-- Dados sensíveis não são expostos?
-- Existe rate limit quando necessário?
+## 5. Security
+- Is authentication required where needed?
+- Is authorization enforced in the backend?
+- Is sensitive data kept from being exposed?
+- Is there rate limiting when needed?
 
-## 6. Erros
-- Erros seguem padrão único?
-- Mensagens ajudam o cliente?
-- Detalhes internos não vazam?
+## 6. Errors
+- Do errors follow a single standard?
+- Do messages help the client?
+- Are internal details kept from leaking?
 
-## 7. Documentação
-- A API é documentada?
-- Existem exemplos de request e response?
-- Casos de erro estão documentados?
+## 7. Documentation
+- Is the API documented?
+- Are there request and response examples?
+- Are error cases documented?
 
-## Saída esperada
-Responda com:
-1. Diagnóstico.
-2. Problemas de contrato.
-3. Problemas de segurança.
-4. Melhorias de consistência.
-5. Exemplo de padrão recomendado.
+## Expected output
+Respond with:
+1. Diagnosis.
+2. Contract problems.
+3. Security problems.
+4. Consistency improvements.
+5. Example of the recommended pattern.

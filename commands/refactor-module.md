@@ -1,10 +1,10 @@
 ---
-description: "Planeja e executa refatoração segura de um módulo existente, preservando comportamento e reduzindo duplicação, acoplamento e complexidade com mudanças pequenas. Use quando a Bea pedir para refatorar, limpar, reorganizar ou simplificar código de um módulo sem mudar o que ele faz."
+description: "Plans and performs a safe refactoring of an existing module, preserving behavior and reducing duplication, coupling and complexity through small changes. Use when Bea asks to refactor, clean up, reorganize or simplify a module's code without changing what it does."
 ---
 
-Planeje e execute uma refatoração segura no módulo indicado.
+Plan and perform a safe refactoring of the specified module.
 
-Use, quando fizer sentido:
+Use, when it makes sense:
 - software-architect
 - backend-engineer
 - frontend-ux-ui
@@ -12,27 +12,27 @@ Use, quando fizer sentido:
 - test-engineer
 - code-review-checklist
 
-Antes de alterar:
-1. Entenda o módulo.
-2. Identifique responsabilidades.
-3. Identifique duplicações.
-4. Identifique acoplamento.
-5. Identifique riscos.
-6. Proponha plano de refatoração.
+Before changing anything:
+1. Understand the module.
+2. Identify responsibilities.
+3. Identify duplication.
+4. Identify coupling.
+5. Identify risks.
+6. Propose a refactoring plan.
 
-Durante a refatoração:
-- Preserve comportamento.
-- Faça mudanças pequenas.
-- Não mude escopo sem necessidade.
-- Não crie abstrações desnecessárias.
-- Sugira testes.
+During the refactoring:
+- Preserve behavior.
+- Make small changes.
+- Do not change scope unless necessary.
+- Do not create unnecessary abstractions.
+- Suggest tests.
 
-Entregue:
-- Diagnóstico.
-- Plano.
-- Mudanças feitas.
-- Riscos restantes.
-- Testes recomendados.
+Deliver:
+- Diagnosis.
+- Plan.
+- Changes made.
+- Remaining risks.
+- Recommended tests.
 
-Argumentos do usuário:
+User arguments:
 $ARGUMENTS

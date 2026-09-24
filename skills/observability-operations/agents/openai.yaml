@@ -1,4 +1,4 @@
 interface:
-  display_name: "Observabilidade e Operações"
-  short_description: "Planeja observabilidade, alertas, incidentes e runbooks"
-  default_prompt: "Planeje ou revise observabilidade e operação para o sistema indicado."
+  display_name: "Observability and Operations"
+  short_description: "Plans observability, alerts, incidents and runbooks"
+  default_prompt: "Plan or review observability and operations for the specified system."
