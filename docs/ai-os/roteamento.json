@@ -1,0 +1,74 @@
+{
+  "schema_version": 2,
+  "nota": "Politica consultiva. NAO e config nativa do Paseo ou gateway. IDs reais de modelo sao verificados no host. Antigravity candidato somente se instalado/autenticado e compatível; não é API paga; DeepSeek Harness opcional.",
+  "classes": {
+    "high": [
+      {
+        "harness": "claude",
+        "perfil": "frontier-arquitetura"
+      },
+      {
+        "harness": "codex",
+        "perfil": "frontier-implementacao"
+      },
+      {
+        "harness": "antigravity",
+        "perfil": "frontier-independent-review",
+        "condicao": "Google AI Pro, Argon realmente disponivel e integracao suportada"
+      }
+    ],
+    "medium": [
+      {
+        "harness": "codex",
+        "perfil": "implementacao"
+      },
+      {
+        "harness": "claude",
+        "perfil": "frontier-arquitetura"
+      },
+      {
+        "harness": "antigravity",
+        "perfil": "second-opinion",
+        "condicao": "modelo confirmado, privacy ok"
+      }
+    ],
+    "low": [
+      {
+        "harness": "opencode",
+        "perfil": "economico-pessoal"
+      },
+      {
+        "harness": "codex",
+        "perfil": "implementacao"
+      }
+    ]
+  },
+  "acesso_dados": {
+    "pessoal-publico": [
+      "claude",
+      "codex",
+      "opencode",
+      "antigravity"
+    ],
+    "pessoal-restrito": [
+      "claude",
+      "codex",
+      "antigravity"
+    ],
+    "institucional": [
+      "claude",
+      "codex",
+      "opencode/glm-5.3-flash-free",
+      "opencode/deepseek-v4.1-flash-free"
+    ]
+  },
+  "nota_institucional": "Segue config/ai-os-memory.toml. Claude/Codex somente via assinaturas, condicionado à configuração de treino das contas Claude/ChatGPT que Felipe deve verificar e desativar. OpenCode Zen/Console: somente os IDs explícitos com retenção zero e sem treino, conforme política oficial consultada em 2026-10-23: https://opencode.ai/v2/docs/console/models/. Lista consultiva, sem bloqueio técnico de modelos.",
+  "guardrails": {
+    "quota_desconhecida": "pedir verificacao real",
+    "limite_fallback": 2,
+    "executar_automaticamente": false,
+    "revisor_independente_para_alto_risco": true,
+    "nao_equivaler_assinatura_e_api": true,
+    "proibir_autoinstalacao_plugins_terceiros": true
+  }
+}

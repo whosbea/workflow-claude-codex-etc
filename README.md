@@ -2,7 +2,7 @@
 
 Minha configuração pessoal para assistentes de IA: instruções globais (`AGENTS.md`), agentes, skills e commands, mais uma seleção de skills de terceiros com commit fixado. Um script instala tudo no Claude Code, no Codex e nas ferramentas que leem `~/.agents/skills` (Gemini CLI, OpenCode etc.).
 
-O conteúdo cobre engenharia de software, pesquisa acadêmica e produção de vídeo para YouTube. Está em português e foi escrito para o meu jeito de trabalhar; se for reaproveitar, leia o `AGENTS.md` antes.
+O conteúdo cobre engenharia de software, pesquisa acadêmica, produção de vídeo para YouTube e design de produto (UX/UI). Está em português e foi escrito para o meu jeito de trabalhar; se for reaproveitar, leia o `AGENTS.md` antes.
 
 ## O que é instalado e onde
 
@@ -14,7 +14,7 @@ O conteúdo cobre engenharia de software, pesquisa acadêmica e produção de v�
 | `commands/*.md` | `~/.claude/commands/` (symlink) | `~/.agents/skills/<comando>/SKILL.md` (gerado) |
 | Skills de terceiros | `~/.claude/skills/` (cópia) | `~/.agents/skills/` (cópia) |
 | Agentes de terceiros | `~/.claude/agents/` (cópia) | `~/.codex/agents/*.toml` (cópia ou conversão) |
-| Playwright MCP | `claude mcp add --scope user` | bloco `[mcp_servers.playwright]` em `~/.codex/config.toml` |
+| Playwright MCP | `claude mcp add --scope user` (pulado se o plugin `playwright@claude-plugins-official` estiver ativo) | bloco `[mcp_servers.playwright]` em `~/.codex/config.toml` |
 
 Detalhes:
 
@@ -45,7 +45,7 @@ Sem `tomllib`, o `--harden` no Claude funciona, mas a parte do Codex é pulada, 
 ## Instalação rápida
 
 ```sh
-git clone git@github.com:whosbea/workflow-claude-codex-etc.git
+git clone git@github.com:FelipeDuan/workflow-claude-codex-etc.git
 cd workflow-claude-codex-etc
 ./install.sh --dry-run    # mostra o plano, não altera nada
 ./install.sh
@@ -109,7 +109,7 @@ Para `settings.json` e `config.toml`, o backup é uma cópia do arquivo anterior
 | [blader/humanizer](https://github.com/blader/humanizer) | `SKILL.md` e `agents/openai.yaml` | Revisar texto que outra pessoa vai ler |
 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | só `ponytail-review`, `ponytail-audit`, `ponytail-debt` | Achar excesso de engenharia e listar comentários `ponytail:` |
 | [sergebulaev/youtube-skills](https://github.com/sergebulaev/youtube-skills) | só `yt-audience-insights`, só o `SKILL.md` | Análise de comentários no modo "cole os comentários/CSV", sem `YOUTUBE_API_KEY` |
-| [Graphify](https://github.com/Graphify-Labs/graphify) | CLI `graphifyy` 0.9.67 via `uv` e a skill `graphify` | Opcional; os hooks do Graphify não são instalados |
+| [Graphify](https://github.com/Graphify-Labs/graphify) | CLI `graphifyy` 0.9.70 via `uv` e a skill `graphify` | Opcional; os hooks do Graphify não são instalados |
 | [Playwright MCP](https://www.npmjs.com/package/@playwright/mcp) | `@playwright/mcp@0.0.82` via `npx` | Controle de navegador pelo agente |
 
 Incorporado no `AGENTS.md` em vez de instalado: as diretrizes de [andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) e a escada de simplicidade do ponytail (seção "Simplicidade e escopo").
@@ -124,7 +124,13 @@ Renomeações e exceções:
 
 ## Figma MCP (manual)
 
-O script não configura o Figma; ele só imprime as instruções. No Claude Code, a integração pode já estar ativa pela conta claude.ai: se `claude mcp list` mostrar `claude.ai Figma`, não há nada a fazer. Senão:
+O script não configura o Figma; ele só imprime as instruções. No Claude Code, o recomendado é o plugin oficial, que usa o mesmo servidor do conector do claude.ai e traz as skills do Figma:
+
+```sh
+claude plugin install figma@claude-plugins-official
+```
+
+Depois confira com `/mcp` que aparece um Figma só. Sem o plugin, ou no Codex:
 
 ```sh
 # Claude Code (depois autentique com /mcp dentro do Claude Code)
@@ -136,6 +142,8 @@ codex mcp login figma
 ```
 
 Documentação oficial: https://developers.figma.com/docs/figma-mcp-server/
+
+Limites por assento, duplicidade com o conector e o resto do workflow de design: [docs/design-workflow.md](docs/design-workflow.md).
 
 ## Como atualizar
 
@@ -169,6 +177,8 @@ skill humanizer  .  humanizer  claude,codex  include=SKILL.md,agents/openai.yaml
 
 Os campos são tipo, id do repo, caminho de origem, nome de destino (`-` usa o `name:` do frontmatter) e alvos. `include=` copia só os caminhos listados. Depois rode `./install.sh --dry-run` e `./install.sh`.
 
+Antes de instalar, rode `scripts/check.sh`: ele valida frontmatter de skills, agentes e commands, nomes duplicados, a conversão para o Codex, a sintaxe do `install.sh`, symlinks e os SHAs do `third-party.lock`.
+
 ## Fluxo de pesquisa científica
 
 O agente `academic-researcher` orquestra 12 skills, uma por etapa: `research-problem`, `research-design`, `literature-review`, `scientific-outline`, `methodology-design`, `experimental-evaluation`, `scientific-writing`, `results-discussion`, `citation-management`, `scientific-reviewer`, `academic-style` e `scientific-integrity`. A base metodológica é Wazlawick (2021), *Metodologia de Pesquisa para Ciência da Computação*, 3ª edição.
@@ -188,17 +198,31 @@ AGENTS.md              instruções globais (vira CLAUDE.md no Claude)
 agents/                agentes próprios (.md no formato do Claude Code)
 skills/                skills próprias (uma pasta com SKILL.md cada)
 commands/              slash commands do Claude Code
-tests/                 casos de aceitação manuais (não são instalados)
+docs/                  documentação do workflow de design e investigações futuras
+tests/                 testes dos scripts (unittest) e casos de aceitação manuais do academic-researcher (não são instalados)
 third-party.lock       fontes de terceiros com commit fixado
 install.sh             instalador
+scripts/check.sh       validação estática
 scripts/md-convert.awk conversão de agentes e commands para o Codex
 scripts/harden.py      merge do --harden em settings.json e config.toml
 harden/                regras do Codex instaladas pelo --harden
 ```
 
+## Sincronizar com o upstream
+
+Este repo é um fork e pode divergir de propósito. Para ver o que mudou no original:
+
+```sh
+git fetch upstream
+git log --oneline HEAD..upstream/main    # commits que ainda não estão aqui
+git diff HEAD...upstream/main            # o que mudou lá desde o ponto em comum
+```
+
+Avalie commit por commit e traga só o que fizer sentido (`git cherry-pick <sha>`). Nada de merge às cegas.
+
 ## Problemas conhecidos
 
 - Só testado em macOS. O script foi escrito para funcionar também em Linux, mas isso não foi verificado.
-- Os commands convertidos têm descrição fraca no Codex, porque nenhum deles tem `description:` ainda.
 - Tirar um item do `third-party.lock` não o desinstala. A cópia continua no HOME até ser removida à mão.
 - Symlinks quebrados (por exemplo, depois de apagar uma skill do repo) são listados no resumo, mas não removidos.
+- Agentes convertidos para o Codex perdem `tools:` e `model:`. Lá, agentes que deveriam ser só leitura (security-reviewer, software-architect, design-critic) dependem apenas das instruções.

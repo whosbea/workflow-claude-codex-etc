@@ -7,6 +7,10 @@ a biblioteca padrão (json; tomllib exige Python >= 3.11).
 Uso:
   harden.py claude-settings <settings.json> --check|--apply
   harden.py codex-env       <config.toml>   --check|--apply
+  harden.py codex-ai-memory-bridge <config.toml> --check|--apply
+  harden.py claude-stop-failure <settings.json> --check|--apply
+  harden.py claude-plugin-dirs <settings.json> <dir> --check|--apply
+  harden.py memory-session-start <settings.json|hooks.json> <script> <python> --check|--apply
 
 Saída (stdout), uma linha por item:
   CHANGE <descrição>   algo seria/foi acrescentado
@@ -19,6 +23,8 @@ Código de saída:
 
 import json
 import os
+import re
+import shutil
 import sys
 import tempfile
 
@@ -111,6 +117,99 @@ def claude_settings(path, apply):
     return CHANGED
 
 
+def claude_stop_failure(path, apply):
+    import shlex
+
+    try:
+        with open(path, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except FileNotFoundError:
+        data = {}
+    except (OSError, ValueError):
+        say("WARN", f"{path}: JSON inválido; arquivo intocado")
+        return UNSAFE
+    if not isinstance(data, dict) or not isinstance(data.get("hooks", {}), dict):
+        say("WARN", f"{path}: hooks não é objeto; arquivo intocado")
+        return UNSAFE
+    hooks = data.get("hooks", {})
+    entries = hooks.get("StopFailure", [])
+    if not isinstance(entries, list):
+        say("WARN", f"{path}: StopFailure não é lista; arquivo intocado")
+        return UNSAFE
+    script = os.path.join(os.path.dirname(os.path.abspath(path)), "hooks", "stop-failure.py")
+    entry = {"matcher": "rate_limit|overloaded|billing_error", "hooks": [
+        {"type": "command", "command": "python3 " + shlex.quote(script), "timeout": 25}
+    ]}
+    if entry in entries:
+        return NOTHING
+    say("CHANGE", f"hooks.StopFailure em {path}")
+    if apply:
+        hooks["StopFailure"] = entries + [entry]
+        data["hooks"] = hooks
+        write_atomic(path, json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    return CHANGED
+
+
+def claude_plugin_dirs(path, directory, apply):
+    try:
+        with open(path, encoding="utf-8") as fh:
+            data = json.load(fh)
+    except FileNotFoundError:
+        data = {}
+    except (OSError, ValueError):
+        say("WARN", f"{path}: JSON inválido; arquivo intocado")
+        return UNSAFE
+    if not isinstance(data, dict) or not isinstance(data.get("env", {}), dict):
+        say("WARN", f"{path}: env não é objeto; arquivo intocado")
+        return UNSAFE
+    env = data.get("env", {})
+    key = "CLAUDE_CODE_PLUGIN_DIRS"
+    current = env.get(key, "")
+    if not isinstance(current, str):
+        say("WARN", f"{path}: env.{key} não é string; arquivo intocado")
+        return UNSAFE
+    if directory in current.split(":"):
+        return NOTHING
+    say("CHANGE", f"env.{key} += {directory} em {path}")
+    if apply:
+        env[key] = current + (":" if current and not current.endswith(":") else "") + directory
+        data["env"] = env
+        write_atomic(path, json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    return CHANGED
+
+
+def memory_session_start(path, script, python, apply):
+    """Acrescenta só nosso handler, preservando os hooks do ai-memory e do usuário."""
+    import shlex
+
+    try:
+        with open(path, encoding="utf-8") as stream:
+            data = json.load(stream)
+    except FileNotFoundError:
+        data = {}
+    except (OSError, ValueError):
+        say("WARN", f"{path}: JSON inválido; arquivo intocado")
+        return UNSAFE
+    if not isinstance(data, dict) or not isinstance(data.get("hooks", {}), dict):
+        say("WARN", f"{path}: hooks não é objeto; arquivo intocado")
+        return UNSAFE
+    hooks = data.get("hooks", {})
+    entries = hooks.get("SessionStart", [])
+    if not isinstance(entries, list):
+        say("WARN", f"{path}: SessionStart não é lista; arquivo intocado")
+        return UNSAFE
+    entry = {"hooks": [{"type": "command", "command": shlex.join([python, script]), "timeout": 2}]}
+    if entry in entries:
+        return NOTHING
+    say("CHANGE", f"hooks.SessionStart (memória automática) em {path}")
+    if apply:
+        # Ordem não garante precedência: Claude executa handlers em paralelo.
+        hooks["SessionStart"] = [entry] + entries
+        data["hooks"] = hooks
+        write_atomic(path, json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    return CHANGED
+
+
 def strip_added(data, had_policy):
     """Remove de uma cópia o que o append acrescenta, para comparar com o original."""
     import copy
@@ -182,11 +281,90 @@ def codex_env(path, apply):
     return CHANGED
 
 
+def codex_ai_memory_bridge(path, apply):
+    try:
+        import tomllib
+    except ImportError:
+        say("WARN", "Python sem tomllib (< 3.11); bridge do ai-memory não configurado; arquivo intocado")
+        return UNSAFE
+    try:
+        with open(path, encoding="utf-8", newline="") as fh:
+            text = fh.read()
+    except FileNotFoundError:
+        return NOTHING
+    except (OSError, UnicodeError) as exc:
+        say("WARN", f"{path} não pôde ser lido ({exc}); arquivo intocado")
+        return UNSAFE
+    try:
+        data = tomllib.loads(text)
+    except tomllib.TOMLDecodeError as exc:
+        say("WARN", f"{path} não é TOML válido ({exc}); arquivo intocado")
+        return UNSAFE
+    servers = data.get("mcp_servers", {})
+    server = servers.get("ai-memory") if isinstance(servers, dict) else None
+    if not isinstance(server, dict) or "url" not in server:
+        return NOTHING
+    command = shutil.which("ai-memory")
+    if not command:
+        fallback = os.path.expanduser("~/.local/bin/ai-memory")
+        if os.path.isfile(fallback) and os.access(fallback, os.X_OK):
+            command = fallback
+    if not command:
+        return NOTHING
+    bridge = {"command": os.path.abspath(command), "args": [
+        "mcp-bridge", "--no-session-id", "--server-url", "http://127.0.0.1:49374/mcp"]}
+
+    # Um prefixo válido diferencia cabeçalhos reais daqueles dentro de strings.
+    # ponytail: parse de prefixos é quadrático; usar lexer se configs grandes importarem.
+    start = end = None
+    for match in re.finditer(r"(?m)^[ \t]*\[[^\r\n]*", text):
+        try:
+            tomllib.loads(text[:match.start()])
+            header = tomllib.loads(match.group() + "\n__workflow_ai_marker__ = true\n")
+        except tomllib.TOMLDecodeError:
+            continue
+        if start is not None:
+            end = match.start()
+            break
+        if header == {"mcp_servers": {"ai-memory": {"__workflow_ai_marker__": True}}}:
+            start = match.start()
+    if start is None:
+        say("WARN", f"{path}: tabela ai-memory sem cabeçalho isolado; arquivo intocado")
+        return UNSAFE
+    if end is None:
+        end = len(text)
+    newline = "\r\n" if "\r\n" in text[start:end] else "\n"
+    block = "[mcp_servers.ai-memory]" + newline
+    block += "command = " + json.dumps(bridge["command"], ensure_ascii=False) + newline
+    block += "args = " + json.dumps(bridge["args"]) + newline
+    candidate = text[:start] + block + text[end:]
+    import copy
+    expected = copy.deepcopy(data)
+    expected["mcp_servers"]["ai-memory"] = bridge
+    try:
+        verified = tomllib.loads(candidate) == expected
+    except tomllib.TOMLDecodeError:
+        verified = False
+    if not verified:
+        say("WARN", f"{path}: substituição da tabela ai-memory não pôde ser verificada; arquivo intocado")
+        return UNSAFE
+    say("CHANGE", f"mcp_servers.ai-memory usa mcp-bridge em {path}")
+    if apply:
+        write_atomic(path, candidate)
+    return CHANGED
+
+
 def main(argv):
-    if len(argv) != 4 or argv[1] not in ("claude-settings", "codex-env") or argv[3] not in ("--check", "--apply"):
+    if len(argv) == 6 and argv[1] == "memory-session-start" and argv[5] in ("--check", "--apply"):
+        return memory_session_start(argv[2], argv[3], argv[4], argv[5] == "--apply")
+    if len(argv) == 5 and argv[1] == "claude-plugin-dirs" and argv[4] in ("--check", "--apply"):
+        return claude_plugin_dirs(argv[2], argv[3], argv[4] == "--apply")
+    if len(argv) != 4 or argv[1] not in ("claude-settings", "codex-env", "codex-ai-memory-bridge", "claude-stop-failure") or argv[3] not in ("--check", "--apply"):
         print(__doc__, file=sys.stderr)
         return 64
-    handler = claude_settings if argv[1] == "claude-settings" else codex_env
+    handler = {"claude-settings": claude_settings, "codex-env": codex_env,
+               "codex-ai-memory-bridge": codex_ai_memory_bridge,
+               "claude-stop-failure": claude_stop_failure}[argv[1]]
     return handler(argv[2], argv[3] == "--apply")
 
 
