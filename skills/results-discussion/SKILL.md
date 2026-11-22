@@ -1,37 +1,34 @@
 ---
 name: results-discussion
-description: "Converter observações reais em discussão crítica sem exagerar causalidade."
+description: "Converter resultados reais em Resultados e Discussão críticos, sem exagerar causalidade."
 ---
 
 # results-discussion
 
-**Ativar quando:** há tabelas, medidas, achados, resultados ou seção Discussão a escrever.
+Base: Wazlawick, §§6.5–6.7, caps. 5 e 10 (operacionalização do agente, não transcrição do livro).
 
-**Fundamentação:** Wazlawick, §§6.5–6.7, caps. 5 e 10. O conteúdo abaixo é operacionalização do agente, não transcrição literal do livro.
-
-## Entradas
-- Dados/figuras verificáveis, perguntas/hipóteses, baselines e estudos relacionados.
+Entrada: dados/figuras verificáveis, perguntas/hipóteses, baselines e estudos relacionados.
 
 ## Procedimento
 1. Catalogar resultados observados com origem e unidades.
 2. Descrever padrões e variações sem adjetivos vazios.
 3. Avaliar comparações, magnitudes, dispersão, incerteza e casos negativos.
 4. Separar associação/correlação, predição, explicação e causalidade.
-5. Contrastar com literatura somente quando estudos forem verificáveis.
-6. Explorar explicações alternativas e condições que alterariam conclusões.
-7. Definir validade, generalização e aplicações em outros contextos sem universalizar.
+5. Contrastar com a literatura só quando os estudos forem verificáveis.
+6. Explorar explicações alternativas e condições que alterariam as conclusões.
+7. Delimitar validade, generalização e aplicação em outros contextos sem universalizar.
 8. Propor trabalhos futuros derivados de limitações reais.
 
-## Saída esperada
-- Resultados factuais; discussão interpretativa; tabela alegação→evidência→limite; implicações e próximos passos.
+## Saída
+Resultados factuais, discussão interpretativa, tabela alegação→evidência→limite, implicações e próximos passos.
 
-## Critérios de conclusão
+## Concluído quando
 - Cada afirmação empírica aponta para evidência.
-- Não transforma sinal em causalidade nem ausência de significância em inexistência de efeito.
-- Limitações relevantes aparecem.
+- Sinal não vira causalidade, nem ausência de significância vira inexistência de efeito.
+- As limitações relevantes aparecem.
 
 ## Regras
-- Não inventar dados, fontes, citações, resultados nem validações. Marcar o que falta com [FONTE PENDENTE], [DADO PENDENTE], [RESULTADO NÃO DISPONÍVEL] ou [DECISÃO METODOLÓGICA PENDENTE].
-- Deixar explícito o que é fato com fonte, resultado documentado, hipótese, interpretação ou decisão proposta.
-- Não apresentar ferramenta ou implementação como contribuição científica sem a pergunta e a evidência que a sustentam.
+- Não inventar dados, fontes, citações, resultados nem validações; marcar o que falta com [FONTE PENDENTE], [DADO PENDENTE], [RESULTADO NÃO DISPONÍVEL] ou [DECISÃO METODOLÓGICA PENDENTE].
+- Rotular cada afirmação como fato com fonte, resultado documentado, hipótese, interpretação ou decisão proposta.
+- Ferramenta ou implementação só conta como contribuição científica com a pergunta e a evidência que a sustentam.
 - Encaminhamento: alegação sem lastro vai para `scientific-integrity`; o texto final da seção segue para `scientific-writing`.

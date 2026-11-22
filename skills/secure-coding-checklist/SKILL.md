@@ -1,56 +1,23 @@
 ---
 name: secure-coding-checklist
-description: Use this skill to review the security of code, APIs, permissions, validation, authentication, authorization, sensitive data, logs, secrets and dependencies.
+description: Defensive security review of code: input, authentication, authorization, sensitive data, logs, secrets, queries, uploads, dependencies.
 ---
 
 # Secure Coding Checklist
 
-Use this checklist in defensive security reviews.
+Check each area:
 
-## 1. Data input
-- Is every input validated?
-- Are types, sizes and formats checked?
-- Is external data treated as untrusted?
+1. **Input**: every input validated (type, size, format); external data treated as untrusted.
+2. **Authentication**: secure login flow, tokens handled correctly, sessions expire, secrets out of the code.
+3. **Authorization**: users reach only what they are allowed to; no IDOR; permissions checked in the backend; sensitive routes protected.
+4. **Sensitive data**: personal data minimized; logs and errors expose no sensitive or internal details; no leakage paths.
+5. **Database**: parameterized queries, no injection, filters respect the authenticated user.
+6. **Uploads**: type and size validated, file names sanitized, public files expose no private data.
+7. **Dependencies and configuration**: only necessary, non-suspicious packages; secure CORS, rate limiting and environment settings.
 
-## 2. Authentication
-- Is the login flow secure?
-- Are tokens handled correctly?
-- Do sessions expire?
-- Are secrets kept out of the code?
+## Output
 
-## 3. Authorization
-- Can users access only what they are allowed to?
-- Is there an IDOR risk?
-- Are permissions checked in the backend?
-- Are sensitive routes protected?
+One table, most severe first; omit severities with no findings:
 
-## 4. Sensitive data
-- Is personal data minimized?
-- Do logs expose sensitive information?
-- Do errors return internal details?
-- Is there a risk of data leakage?
-
-## 5. Database and queries
-- Do queries use parameters?
-- Is there an injection risk?
-- Do filters respect the authenticated user?
-
-## 6. Uploads and files
-- Are type and size validated?
-- Are file names sanitized?
-- Do public files avoid exposing private data?
-
-## 7. Dependencies and configuration
-- Are the dependencies necessary?
-- Are there suspicious packages?
-- Are CORS, rate limiting and environment settings secure?
-
-## Expected output
-Classify findings as:
-- Critical.
-- High.
-- Medium.
-- Low.
-- Recommendation.
-
-Always explain impact and mitigation.
+| Severity (Critical / High / Medium / Low / Recommendation) | Location | Finding | Impact | Mitigation |
+|---|---|---|---|---|

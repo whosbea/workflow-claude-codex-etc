@@ -1,6 +1,6 @@
 ---
 name: ci-cd-pipeline
-description: Design, implement or review continuous integration, delivery and deployment pipelines in GitHub Actions, GitLab CI, Jenkins, Azure DevOps or equivalents. Use for requests about builds, tests, artifacts, releases, environments, approvals, deploys, rollback, caches or delivery supply chain security.
+description: Design, implement or review CI/CD pipelines (GitHub Actions, GitLab CI, Jenkins etc.): builds, artifacts, releases, deploys, rollback, caches, supply chain security.
 ---
 
 # CI/CD Pipeline
@@ -12,4 +12,4 @@ description: Design, implement or review continuous integration, delivery and de
 5. Avoid duplication with proportional reuse. Use caching only with correct keys and invalidation; do not confuse cache with artifacts.
 6. Keep production deploys separate, with appropriate protections. Define strategy, health checks, timeout, rollback and handling of partial runs.
 7. Do not trigger a real release or deploy without an explicit request and confirmation of the repository, environment and version.
-8. Validate syntax and safe behavior; deliver the flow, changes, risks, rollback and how to test.
+8. Validate syntax and safe behavior. Deliver, in short lists: the flow, changes, risks, rollback and how to test.

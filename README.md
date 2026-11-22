@@ -2,7 +2,7 @@
 
 Minha configuração pessoal para assistentes de IA: instruções globais (`AGENTS.md`), agentes, skills e commands, mais uma seleção de skills de terceiros com commit fixado. Um script instala tudo no Claude Code, no Codex e nas ferramentas que leem `~/.agents/skills` (Gemini CLI, OpenCode etc.).
 
-O conteúdo cobre engenharia de software, pesquisa acadêmica e produção de vídeo para YouTube. Está em português e foi escrito para o meu jeito de trabalhar; se for reaproveitar, leia o `AGENTS.md` antes.
+O conteúdo cobre engenharia de software e pesquisa acadêmica. Está em português e foi escrito para o meu jeito de trabalhar; se for reaproveitar, leia o `AGENTS.md` antes.
 
 ## O que é instalado e onde
 
@@ -19,7 +19,7 @@ O conteúdo cobre engenharia de software, pesquisa acadêmica e produção de v�
 Detalhes:
 
 - O conteúdo próprio vira symlink para o repo. As exceções são os agentes no Codex, convertidos de `.md` para `.toml` por `scripts/md-convert.awk`, e os commands, que no Codex viram skills. Arquivos gerados são cópias.
-- O nome do `.toml` vem do `name:` do frontmatter. Exemplo: `agents/youtube-master.md` gera `youtube-master.toml`.
+- O nome do `.toml` vem do `name:` do frontmatter. Exemplo: `agents/backend-engineer.md` gera `backend-engineer.toml`.
 - Terceiros são baixados para `~/.local/share/workflow-ai/vendor/<id>` no commit fixado em `third-party.lock` e copiados de lá.
 - O motor da impeccable vai para `~/.impeccable/bin/<versão>/impeccable`.
 - O Graphify é instalado com `uv tool install`, e a skill dele é copiada para os dois destinos.
@@ -108,7 +108,6 @@ Para `settings.json` e `config.toml`, o backup é uma cópia do arquivo anterior
 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | skill `impeccable`, 2 agentes e o motor binário | Criar, criticar e polir telas |
 | [blader/humanizer](https://github.com/blader/humanizer) | `SKILL.md` e `agents/openai.yaml` | Revisar texto que outra pessoa vai ler |
 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | só `ponytail-review`, `ponytail-audit`, `ponytail-debt` | Achar excesso de engenharia e listar comentários `ponytail:` |
-| [sergebulaev/youtube-skills](https://github.com/sergebulaev/youtube-skills) | só `yt-audience-insights`, só o `SKILL.md` | Análise de comentários no modo "cole os comentários/CSV", sem `YOUTUBE_API_KEY` |
 | [Graphify](https://github.com/Graphify-Labs/graphify) | CLI `graphifyy` 0.9.67 via `uv` e a skill `graphify` | Opcional; os hooks do Graphify não são instalados |
 | [Playwright MCP](https://www.npmjs.com/package/@playwright/mcp) | `@playwright/mcp@0.0.82` via `npx` | Controle de navegador pelo agente |
 

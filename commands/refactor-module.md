@@ -1,38 +1,14 @@
 ---
-description: "Plans and performs a safe refactoring of an existing module, preserving behavior and reducing duplication, coupling and complexity through small changes. Use when Bea asks to refactor, clean up, reorganize or simplify a module's code without changing what it does."
+description: "Safe refactor of an existing module: preserves behavior, reduces duplication, coupling and complexity in small steps. Use to refactor, clean up or simplify code."
 ---
 
-Plan and perform a safe refactoring of the specified module.
+Plan and perform a safe refactoring of the specified module. Use, when they fit: software-architect, backend-engineer, frontend-ux-ui, security-reviewer, test-engineer, code-review-checklist.
 
-Use, when it makes sense:
-- software-architect
-- backend-engineer
-- frontend-ux-ui
-- security-reviewer
-- test-engineer
-- code-review-checklist
+Before changing anything: understand the module, its responsibilities, duplication, coupling and risks, and propose a plan.
 
-Before changing anything:
-1. Understand the module.
-2. Identify responsibilities.
-3. Identify duplication.
-4. Identify coupling.
-5. Identify risks.
-6. Propose a refactoring plan.
+During: preserve behavior, small changes, scope unchanged unless necessary, no unnecessary abstractions, suggest tests.
 
-During the refactoring:
-- Preserve behavior.
-- Make small changes.
-- Do not change scope unless necessary.
-- Do not create unnecessary abstractions.
-- Suggest tests.
-
-Deliver:
-- Diagnosis.
-- Plan.
-- Changes made.
-- Remaining risks.
-- Recommended tests.
+Deliver: diagnosis, plan, changes made, remaining risks, recommended tests.
 
 User arguments:
 $ARGUMENTS

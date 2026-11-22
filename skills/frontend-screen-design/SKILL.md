@@ -1,56 +1,25 @@
 ---
 name: frontend-screen-design
-description: Use this skill to create or review screens with a focus on UX/UI, responsiveness, accessibility, visual hierarchy, screen states and user flow.
+description: Create or review UI screens and flows: hierarchy, layout, states, accessibility, microcopy.
 ---
 
 # Frontend Screen Design
 
-Use this skill to design or review screens.
+Check each area:
 
-## 1. Screen goal
-- What problem does the screen solve?
-- Who uses this screen?
-- What is the primary action?
-- What is the secondary action?
+1. **Goal**: problem the screen solves, who uses it, primary and secondary action.
+2. **Visual hierarchy**: clear title, visible primary action, important information first, no clutter.
+3. **Layout**: works on mobile and desktop, consistent spacing, aligned components.
+4. **States**: loading, error, empty, success, permission denied, partial data, invalid form.
+5. **Accessibility**: enough contrast, clear button labels, labeled inputs, sensible keyboard navigation, feedback that does not rely on color alone.
+6. **Microcopy**: clear, unambiguous messages; errors say how to fix them.
 
-## 2. Visual hierarchy
-- Is the title clear?
-- Is the primary action visible?
-- Does important information appear first?
-- Is there visual clutter?
+## Output
 
-## 3. Layout
-- Does it work well on mobile?
-- Does it work well on desktop?
-- Is spacing consistent?
-- Are components aligned?
+Short lists, skipping empty sections:
 
-## 4. States
-The screen must account for:
-- Loading.
-- Error.
-- Empty.
-- Success.
-- Permission denied.
-- Partial data.
-- Invalid form.
-
-## 5. Accessibility
-- Does text have enough contrast?
-- Do buttons have clear labels?
-- Do inputs have labels?
-- Does keyboard navigation make sense?
-- Does feedback avoid relying on color alone?
-
-## 6. Microcopy
-- Are messages clear?
-- Do errors say how to fix them?
-- Does the text avoid ambiguity?
-
-## Expected output
-Respond with:
-1. Screen goal.
+1. Screen goal and primary action.
 2. Recommended visual structure.
 3. Required states.
-4. UX points.
+4. UX problems found.
 5. Implementation suggestion compatible with the project.

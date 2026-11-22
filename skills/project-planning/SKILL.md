@@ -1,58 +1,20 @@
 ---
 name: project-planning
-description: Use this skill to plan projects, features, tasks, phases, scope, risks, acceptance criteria and a logical order of execution.
+description: Plan a project or feature: scope, phases, ordered tasks, acceptance criteria, dependencies and risks. Use before starting non-trivial work.
 ---
 
 # Project Planning
 
-Use this skill to plan projects and features.
+1. **Context**: goal, problem, audience, constraints, existing stack, deadline if any.
+2. **Scope**: essential, important, optional, out of scope.
+3. **Phases**, as needed: setup, structural foundation, core features, validations, tests, documentation, final review.
+4. **Tasks**: each with description, acceptance criterion, dependencies, risk and execution order.
+5. **Risks**: technical, product, security, schedule, maintenance.
 
-## 1. Context
-Identify:
-- Goal.
-- Problem.
-- Audience.
-- Constraints.
-- Existing stack.
-- Deadline, if any.
+## Output
 
-## 2. Scope
-Separate into:
-- Essential.
-- Important.
-- Optional.
-- Out of scope.
+Short lists and tables, skipping empty sections:
 
-## 3. Phases
-Organize into:
-- Setup.
-- Structural foundation.
-- Core features.
-- Validations.
-- Tests.
-- Documentation.
-- Final review.
-
-## 4. Tasks
-Each task must have:
-- Description.
-- Acceptance criterion.
-- Dependencies.
-- Risk.
-- Execution order.
-
-## 5. Risks
-Assess:
-- Technical.
-- Product.
-- Security.
-- Schedule.
-- Maintenance.
-
-## Expected output
-Respond with:
-1. Plan summary.
-2. Phases.
-3. Ordered to-do list.
-4. Acceptance criteria.
-5. Risks and mitigation.
+1. Plan summary (2–3 lines) and scope split.
+2. Ordered task table: task, acceptance criterion, dependencies, risk.
+3. Main risks with mitigation.

@@ -30,7 +30,6 @@ repo  taste        https://github.com/leonxlnx/taste-skill        c184364c58658b
 repo  impeccable   https://github.com/pbakaus/impeccable          e0881d2de397d5e9761d7b35ff5017d8f5ebf69b
 repo  humanizer    https://github.com/blader/humanizer            9862685f575c65a8247f90369951df1b3416e3d6
 repo  ponytail     https://github.com/DietrichGebert/ponytail     e3ba2aa6f1e6f0bc4d69eb09c9f0d0a93af56156
-repo  youtube      https://github.com/sergebulaev/youtube-skills  0e0a8cae2a7c78c77f89090fe3288f86439e622b
 # Referência apenas (NÃO instalado; o conteúdo foi incorporado ao AGENTS.md):
 # repo karpathy    https://github.com/multica-ai/andrej-karpathy-skills 2c606141936f1eeef17fa3043a72095b4765b9c2
 
@@ -128,12 +127,6 @@ skill humanizer  .  humanizer  claude,codex  include=SKILL.md,agents/openai.yaml
 skill ponytail  skills/ponytail-review  -  claude,codex
 skill ponytail  skills/ponytail-audit   -  claude,codex
 skill ponytail  skills/ponytail-debt    -  claude,codex
-
-# ---------------------------------------------------------------- sergebulaev/youtube-skills
-# Só yt-audience-insights, só o SKILL.md (sem lib/, scripts/ nem as outras 8 skills).
-# Roda no modo "cole os comentários/CSV", sem YOUTUBE_API_KEY. O SKILL.md cita
-# lib.YouTubeClient(), que não é instalado: o próprio texto prevê o fallback.
-skill youtube  skills/yt-audience-insights  -  claude,codex  include=SKILL.md
 
 # ---------------------------------------------------------------- Graphify (CLI Python, opcional)
 # Instalado com `uv tool install graphifyy==<versão>` se o uv existir.
