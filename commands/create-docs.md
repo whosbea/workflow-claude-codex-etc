@@ -1,39 +1,14 @@
 ---
-description: "Creates or reviews documentation for a project, module, API or feature, such as a README, setup guide, ADR, changelog, contributing guide, user manual, architecture and deploy docs. Use when Bea asks to document something, write or update a README, create an ADR, a changelog, API docs or installation and deploy instructions."
+description: "Creates or reviews docs for a project, module, API or feature: README, setup, API docs, ADR, changelog, contributing, user manual, architecture, deploy."
 ---
 
-Create or review documentation for the specified project, module, API or feature.
+Create or review documentation for the specified project, module, API or feature, using documentation-writer (plus software-architect, backend-engineer, frontend-ux-ui or product-strategist when the topic needs them).
 
-Use:
-- documentation-writer
-- software-architect
-- backend-engineer
-- frontend-ux-ui
-- product-strategist
+Types: README, setup guide, API docs, ADR, changelog, contributing guide, user manual, architecture docs.
 
-Possible types:
-- README.
-- Setup guide.
-- API documentation.
-- ADR.
-- Changelog.
-- Contributing guide.
-- User manual.
-- Architecture documentation.
+Include only the sections that apply, picked from: goal, prerequisites, how to run, structure, main commands, environment variables, important flows, technical decisions, known issues, next steps.
 
-Deliver clear, objective and useful documentation.
-
-Include:
-1. Goal.
-2. Prerequisites.
-3. How to run.
-4. Structure.
-5. Main commands.
-6. Environment variables, if any.
-7. Important flows.
-8. Technical decisions.
-9. Known issues.
-10. Next steps.
+Keep it short: one file unless more were requested, no content duplicated from other docs.
 
 User arguments:
 $ARGUMENTS

@@ -1,31 +1,12 @@
 ---
-description: "Generates a test plan and, if requested, implements unit, integration, e2e, contract and regression tests compatible with the project's stack. Use when Bea asks for tests, a test plan, coverage of a feature or module, error and permission cases, or a regression test for a fixed bug."
+description: "Plans tests and, if asked, implements them (unit, integration, e2e, contract, regression) in the project's stack. Use for test plans, coverage, error/permission cases, bug regressions."
 ---
 
-Generate a test plan and, if requested, implement tests compatible with the project's stack.
+Generate a test plan and, if requested, implement tests compatible with the project's stack, using test-engineer and test-plan-generator.
 
-Use:
-- test-engineer
-- test-plan-generator
+Analyze: target feature or module, business rules, happy paths, error scenarios, permissions, validations, likely regressions, and which belong in unit, integration or e2e tests.
 
-Analyze:
-1. Target feature or module.
-2. Business rules.
-3. Happy paths.
-4. Error scenarios.
-5. Permissions.
-6. Validations.
-7. Likely regressions.
-8. Unit tests.
-9. Integration tests.
-10. E2E tests.
-
-Deliver:
-- Test plan.
-- List of scenarios.
-- Priority.
-- Files to create or change.
-- Implementation, only if the user asks for it.
+Deliver: prioritized scenarios and the files to create or change. Implement only if the user asks.
 
 User arguments:
 $ARGUMENTS

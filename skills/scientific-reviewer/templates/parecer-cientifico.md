@@ -1,5 +1,7 @@
 # Parecer técnico-científico
 
+Listas curtas; omita seções sem conteúdo.
+
 ## Tipo e escopo do manuscrito
 ## Síntese da contribuição alegada e da evidência existente
 ## Pontos fortes fundamentados

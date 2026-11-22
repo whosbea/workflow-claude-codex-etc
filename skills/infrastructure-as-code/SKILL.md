@@ -1,6 +1,6 @@
 ---
 name: infrastructure-as-code
-description: Design, implement or review infrastructure as code with Terraform, OpenTofu, CloudFormation, Pulumi, Ansible or equivalent tools. Use for requests about modules, environments, remote state, networking, IAM, containers, cloud, drift, plans or reviews of infrastructure changes.
+description: Design, implement or review infrastructure as code (Terraform, OpenTofu, CloudFormation, Pulumi, Ansible): modules, environments, state, networking, IAM, drift, plans.
 ---
 
 # Infrastructure as Code
@@ -12,4 +12,4 @@ description: Design, implement or review infrastructure as code with Terraform, 
 5. Assess dependencies, drift, import of existing resources, cost impact and risk of downtime.
 6. Before `apply`, `destroy`, an import or a migration, present the plan, the exact target, the destructive changes, the validation and the rollback; run it only with explicit authorization.
 7. Validate formatting, syntax and the plan using the project's tools. Do not treat a plan as an absolute guarantee.
-8. Deliver changed files, decisions, validation evidence, impact, rollback and open items.
+8. Deliver, in short lists: changed files, decisions, validation evidence, impact, rollback and open items.

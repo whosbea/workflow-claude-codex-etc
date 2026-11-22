@@ -1,16 +1,13 @@
 ---
 name: scientific-integrity
-description: "Auditar integridade, transparência, ética e limites de inferência."
+description: "Auditar integridade, transparência, ética e limites de inferência: evidência fabricada, citação duvidosa, extrapolação, autoria."
 ---
 
 # scientific-integrity
 
-**Ativar quando:** há suspeita de evidência fabricada, citações duvidosas, extrapolação, autoria ou ética; também como verificação transversal.
+Base: Wazlawick, cap. 12, com apoio dos caps. 3 e 6 (operacionalização do agente, não transcrição do livro).
 
-**Fundamentação:** Wazlawick, cap. 12, com apoio dos caps. 3 e 6. O conteúdo abaixo é operacionalização do agente, não transcrição literal do livro.
-
-## Entradas
-- Texto e fontes/dados disponíveis; política editorial/ética quando fornecida.
+Entrada: texto, fontes/dados disponíveis e política editorial/ética quando fornecida.
 
 ## Procedimento
 1. Marcar cada alegação relevante: fonte verificada, dado próprio, interpretação, hipótese ou pendente.
@@ -18,20 +15,20 @@ description: "Auditar integridade, transparência, ética e limites de inferênc
 3. Inspecionar risco de plágio, paráfrase excessivamente próxima e atribuições inadequadas.
 4. Examinar consentimento, privacidade, tratamento de dados, riscos a participantes e aprovações quando cabíveis; não afirmar aprovação sem documento.
 5. Identificar generalização indevida, causalidade ilegítima e seleção enviesada de resultados.
-6. Verificar transparência de limitação, procedimento e conflitos de interesse quando informado.
+6. Verificar transparência de limitações, procedimento e conflitos de interesse quando informados.
 7. Sugerir correção ou rotulagem de pendências sem encobrir problemas.
 8. Não acusar má conduta sem evidência.
 
-## Saída esperada
-- Registro de integridade por gravidade, evidências disponíveis e ações corretivas recomendadas.
+## Saída
+Tabela por gravidade: local, problema, evidência disponível, ação corretiva. Omita o que não se aplica.
 
-## Critérios de conclusão
-- Toda pendência importante é localizada.
-- Preserva distinção entre erro, ausência de informação e fraude comprovada.
-- Nunca cria selos fictícios de conformidade.
+## Concluído quando
+- Toda pendência importante está localizada.
+- Erro, ausência de informação e fraude comprovada continuam distintos.
+- Nenhum selo fictício de conformidade foi criado.
 
 ## Regras
-- Não inventar dados, fontes, citações, resultados nem validações. Marcar o que falta com [FONTE PENDENTE], [DADO PENDENTE], [RESULTADO NÃO DISPONÍVEL] ou [DECISÃO METODOLÓGICA PENDENTE].
-- Deixar explícito o que é fato com fonte, resultado documentado, hipótese, interpretação ou decisão proposta.
-- Não apresentar ferramenta ou implementação como contribuição científica sem a pergunta e a evidência que a sustentam.
+- Não inventar dados, fontes, citações, resultados nem validações; marcar o que falta com [FONTE PENDENTE], [DADO PENDENTE], [RESULTADO NÃO DISPONÍVEL] ou [DECISÃO METODOLÓGICA PENDENTE].
+- Rotular cada afirmação como fato com fonte, resultado documentado, hipótese, interpretação ou decisão proposta.
+- Ferramenta ou implementação só conta como contribuição científica com a pergunta e a evidência que a sustentam.
 - Encaminhamento: fontes e metadados vão para `citation-management`; avaliação completa do manuscrito vai para `scientific-reviewer`.

@@ -1,6 +1,6 @@
 # As 20 perguntas geradoras
 
-Catálogo original preservado do agente. O mapeamento é sugestivo: adaptar ao tipo de pesquisa e registrar status **atendida / parcial / pendente / não aplicável (justificado)**.
+Catálogo original do agente. O mapeamento é sugestivo: adapte ao tipo de pesquisa e registre o status **atendida / parcial / pendente / não aplicável (justificado)**.
 
 | Nº | Pergunta | Seções candidatas |
 |---|---|---|
@@ -25,9 +25,4 @@ Catálogo original preservado do agente. O mapeamento é sugestivo: adaptar ao t
 | 19 | Sugestões de trabalhos futuros | Conclusão |
 | 20 | Observações Gerais | Todas; Revisão final |
 
-## Matriz de auditoria (usar na saída do esqueleto)
-| Nº | Seção designada | Evidência necessária | Status | Próxima ação |
-|---|---|---|---|---|
-| 1–20 | Preencher individualmente | Não inventar | pendente/parcial/atendida/não aplicável | Definir |
-
-Para pesquisas formais, substitua experimentação por prova ou argumentação formal justificada. Para artigos de proposta ainda sem avaliação, marque resultados como não disponíveis.
+A matriz de auditoria fica em `../templates/esqueleto-artigo.md`. Em pesquisa formal, experimentação vira prova ou argumentação formal justificada; em proposta ainda sem avaliação, os resultados ficam como não disponíveis.

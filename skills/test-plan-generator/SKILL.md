@@ -1,51 +1,17 @@
 ---
 name: test-plan-generator
-description: Use this skill to generate a test plan covering unit, integration, e2e, contract and regression tests for a feature or module.
+description: Generate a test plan (unit, integration, e2e, contract, regression) for a feature or module. Use when deciding what to test.
 ---
 
 # Test Plan Generator
 
-Use this skill to turn a feature into a test plan.
+1. **Understand**: expected behavior, business rule, valid and invalid inputs, permissions, external dependencies.
+2. **Scenarios**: happy path, validation, nonexistent resource, user without permission, empty state, external error, likely regressions.
+3. **Types**: pick among unit, integration, e2e, contract and regression per scenario.
+4. **Quality**: each test has a clear name, Arrange-Act-Assert, input data, expected result and a reason to exist.
 
-## 1. Understanding
-Identify:
-- The expected behavior.
-- The business rule.
-- Valid inputs.
-- Invalid inputs.
-- Permissions involved.
-- External dependencies.
+## Output
 
-## 2. Scenarios
-Cover:
-- Happy path.
-- Validation.
-- Nonexistent resource.
-- User without permission.
-- Empty state.
-- External error.
-- Likely regressions.
-
-## 3. Test types
-Suggest:
-- Unit.
-- Integration.
-- E2E.
-- Contract.
-- Regression.
-
-## 4. Quality
-Each test must have:
-- A clear name.
-- Arrange, Act, Assert.
-- Input data.
-- Expected result.
-- A reason to exist.
-
-## Expected output
-Respond with:
-1. Overall plan.
-2. Scenario table.
-3. Priority tests.
-4. Edge cases.
-5. Implementation suggestion.
+1. Scenario table: scenario, type, input, expected result, priority.
+2. Edge cases not in the table, if any.
+3. Implementation suggestion (framework, files) in 2–3 lines.

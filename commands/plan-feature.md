@@ -1,33 +1,18 @@
 ---
-description: "Plans a feature before implementing it, covering understanding, essential and out-of-scope items, backend, frontend and security impact, test plan, acceptance criteria and implementation order. Use when Bea asks to plan, break down into tasks, define scope or build a technical plan for a new feature."
+description: "Plans a feature before implementing: scope, out of scope, backend/frontend/security impact, test plan, ordered tasks and acceptance criteria."
 ---
 
-Plan the requested feature before implementing it.
-
-Use, when it makes sense:
-- product-strategist
-- software-architect
-- backend-engineer
-- frontend-ux-ui
-- security-reviewer
-- test-engineer
-- project-planning
-- api-design-pattern
-- frontend-screen-design
-- test-plan-generator
+Plan the requested feature before implementing it. Use, when they fit: product-strategist, software-architect, backend-engineer, frontend-ux-ui, security-reviewer, test-engineer, project-planning, api-design-pattern, frontend-screen-design, test-plan-generator.
 
 Deliver:
 1. Understanding of the feature.
-2. Essential scope.
-3. Out of scope.
-4. Backend impact.
-5. Frontend impact.
-6. Security impact.
-7. Test plan.
-8. To-do list in logical order.
-9. Acceptance criteria.
+2. Essential scope and out of scope.
+3. Backend, frontend and security impact.
+4. Test plan.
+5. To-do list in logical order.
+6. Acceptance criteria.
 
-Do not implement before presenting the plan, unless the user explicitly asks you to.
+Present the plan before implementing, unless the user explicitly asks to implement right away.
 
 User arguments:
 $ARGUMENTS

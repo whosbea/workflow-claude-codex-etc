@@ -1,6 +1,6 @@
 ---
 name: observability-operations
-description: Plan, implement or review system observability and operations, including logs, metrics, traces, SLIs/SLOs, alerts, dashboards, incidents, runbooks, capacity, backups and recovery. Use for requests about monitoring, reliability, incident response or production operations.
+description: Plan, implement or review monitoring and operations: logs, metrics, traces, SLOs, alerts, incidents, runbooks, capacity, backups and recovery.
 ---
 
 # Observability and Operations
@@ -13,4 +13,4 @@ description: Plan, implement or review system observability and operations, incl
 6. For each runbook, record the condition, safe diagnosis, mitigation, escalation, communication, rollback and evidence of recovery.
 7. Plan backups and restores with clear RPO/RTO; a backup not validated by a restore test is no guarantee of recovery.
 8. During incidents, prioritize containment and service, preserve evidence and leave permanent changes for later analysis.
-9. Deliver proposed coverage, gaps, dashboards, alerts, runbooks, costs and a validation plan.
+9. Deliver, in short lists and skipping what does not apply: proposed coverage, gaps, dashboards, alerts, runbooks, costs and a validation plan.

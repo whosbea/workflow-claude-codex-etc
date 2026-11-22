@@ -1,0 +1,639 @@
+{
+  "meta": {
+    "label": "pos-faxina",
+    "date": "2026-11-21",
+    "since": "2026-10-22",
+    "until": "2026-11-21",
+    "token_estimate_method": "chars/4"
+  },
+  "part_a": {
+    "claude_md": {
+      "path": "/Users/bea/.claude/CLAUDE.md",
+      "resolved": "/Users/bea/workspace/workflow-claude-codex-etc/AGENTS.md",
+      "files": 1,
+      "words": 1327,
+      "chars": 8704,
+      "tokens_est": 2176
+    },
+    "counts": {
+      "skills": 90,
+      "agents": 12,
+      "commands": 6
+    },
+    "skills_without_skill_md": [
+      "synced"
+    ],
+    "skills": {
+      "frontmatter_total": {
+        "files": 90,
+        "words": 3052,
+        "chars": 22542,
+        "tokens_est": 5635
+      },
+      "frontmatter_top": [
+        {
+          "name": "impeccable",
+          "words": 121,
+          "chars": 925,
+          "tokens_est": 231
+        },
+        {
+          "name": "mobile-native",
+          "words": 127,
+          "chars": 771,
+          "tokens_est": 193
+        },
+        {
+          "name": "imagegen-frontend-web",
+          "words": 93,
+          "chars": 702,
+          "tokens_est": 176
+        },
+        {
+          "name": "imagegen-frontend-mobile",
+          "words": 90,
+          "chars": 682,
+          "tokens_est": 170
+        },
+        {
+          "name": "image-to-code",
+          "words": 83,
+          "chars": 588,
+          "tokens_est": 147
+        },
+        {
+          "name": "animate-expo",
+          "words": 84,
+          "chars": 555,
+          "tokens_est": 139
+        },
+        {
+          "name": "yt-audience-insights",
+          "words": 73,
+          "chars": 531,
+          "tokens_est": 133
+        },
+        {
+          "name": "write-swift",
+          "words": 76,
+          "chars": 513,
+          "tokens_est": 128
+        },
+        {
+          "name": "ponytail-review",
+          "words": 62,
+          "chars": 507,
+          "tokens_est": 127
+        },
+        {
+          "name": "animate",
+          "words": 75,
+          "chars": 499,
+          "tokens_est": 125
+        },
+        {
+          "name": "brandkit",
+          "words": 55,
+          "chars": 492,
+          "tokens_est": 123
+        },
+        {
+          "name": "improve-animations",
+          "words": 77,
+          "chars": 485,
+          "tokens_est": 121
+        },
+        {
+          "name": "animation-vocabulary",
+          "words": 76,
+          "chars": 464,
+          "tokens_est": 116
+        },
+        {
+          "name": "apple-design",
+          "words": 52,
+          "chars": 457,
+          "tokens_est": 114
+        },
+        {
+          "name": "ask-sonner",
+          "words": 69,
+          "chars": 453,
+          "tokens_est": 113
+        }
+      ],
+      "body_total": {
+        "files": 90,
+        "words": 110740,
+        "chars": 737000,
+        "tokens_est": 184254
+      },
+      "body_top": [
+        {
+          "name": "design-taste-frontend",
+          "words": 12853,
+          "chars": 87126,
+          "tokens_est": 21782
+        },
+        {
+          "name": "write-swift",
+          "words": 6053,
+          "chars": 42214,
+          "tokens_est": 10554
+        },
+        {
+          "name": "graphify",
+          "words": 5211,
+          "chars": 41216,
+          "tokens_est": 10304
+        },
+        {
+          "name": "imagegen-frontend-mobile",
+          "words": 6552,
+          "chars": 40285,
+          "tokens_est": 10071
+        },
+        {
+          "name": "imagegen-frontend-web",
+          "words": 5819,
+          "chars": 36780,
+          "tokens_est": 9195
+        },
+        {
+          "name": "image-to-code",
+          "words": 5820,
+          "chars": 36361,
+          "tokens_est": 9090
+        },
+        {
+          "name": "humanizer",
+          "words": 4593,
+          "chars": 28696,
+          "tokens_est": 7174
+        },
+        {
+          "name": "emil-design-eng",
+          "words": 3865,
+          "chars": 27029,
+          "tokens_est": 6757
+        },
+        {
+          "name": "apple-design",
+          "words": 3479,
+          "chars": 22880,
+          "tokens_est": 5720
+        },
+        {
+          "name": "design-taste-frontend-v1",
+          "words": 2937,
+          "chars": 21190,
+          "tokens_est": 5298
+        },
+        {
+          "name": "animate-expo",
+          "words": 2840,
+          "chars": 17785,
+          "tokens_est": 4446
+        },
+        {
+          "name": "mobile-native",
+          "words": 2690,
+          "chars": 16787,
+          "tokens_est": 4197
+        },
+        {
+          "name": "brandkit",
+          "words": 2600,
+          "chars": 15967,
+          "tokens_est": 3992
+        },
+        {
+          "name": "redesign-existing-projects",
+          "words": 2210,
+          "chars": 15032,
+          "tokens_est": 3758
+        },
+        {
+          "name": "animation-vocabulary",
+          "words": 2208,
+          "chars": 13181,
+          "tokens_est": 3295
+        }
+      ]
+    },
+    "agents": {
+      "frontmatter_total": {
+        "files": 12,
+        "words": 283,
+        "chars": 2336,
+        "tokens_est": 584
+      },
+      "body_total": {
+        "files": 12,
+        "words": 5995,
+        "chars": 41154,
+        "tokens_est": 10289
+      },
+      "items": [
+        {
+          "name": "academic-researcher",
+          "frontmatter": {
+            "words": 28,
+            "chars": 262,
+            "tokens_est": 66
+          },
+          "body": {
+            "words": 628,
+            "chars": 4765,
+            "tokens_est": 1191
+          }
+        },
+        {
+          "name": "backend-engineer",
+          "frontmatter": {
+            "words": 25,
+            "chars": 193,
+            "tokens_est": 48
+          },
+          "body": {
+            "words": 159,
+            "chars": 1151,
+            "tokens_est": 288
+          }
+        },
+        {
+          "name": "devops-infrastructure",
+          "frontmatter": {
+            "words": 18,
+            "chars": 176,
+            "tokens_est": 44
+          },
+          "body": {
+            "words": 213,
+            "chars": 1712,
+            "tokens_est": 428
+          }
+        },
+        {
+          "name": "documentation-writer",
+          "frontmatter": {
+            "words": 22,
+            "chars": 174,
+            "tokens_est": 44
+          },
+          "body": {
+            "words": 182,
+            "chars": 1165,
+            "tokens_est": 291
+          }
+        },
+        {
+          "name": "frontend-ux-ui",
+          "frontmatter": {
+            "words": 27,
+            "chars": 202,
+            "tokens_est": 50
+          },
+          "body": {
+            "words": 998,
+            "chars": 6875,
+            "tokens_est": 1719
+          }
+        },
+        {
+          "name": "impeccable-documenter",
+          "frontmatter": {
+            "words": 25,
+            "chars": 190,
+            "tokens_est": 48
+          },
+          "body": {
+            "words": 488,
+            "chars": 3140,
+            "tokens_est": 785
+          }
+        },
+        {
+          "name": "impeccable-finish-reviewer",
+          "frontmatter": {
+            "words": 28,
+            "chars": 213,
+            "tokens_est": 53
+          },
+          "body": {
+            "words": 2349,
+            "chars": 15230,
+            "tokens_est": 3808
+          }
+        },
+        {
+          "name": "product-strategist",
+          "frontmatter": {
+            "words": 21,
+            "chars": 184,
+            "tokens_est": 46
+          },
+          "body": {
+            "words": 149,
+            "chars": 1049,
+            "tokens_est": 262
+          }
+        },
+        {
+          "name": "security-reviewer",
+          "frontmatter": {
+            "words": 22,
+            "chars": 213,
+            "tokens_est": 53
+          },
+          "body": {
+            "words": 146,
+            "chars": 1148,
+            "tokens_est": 287
+          }
+        },
+        {
+          "name": "software-architect",
+          "frontmatter": {
+            "words": 18,
+            "chars": 181,
+            "tokens_est": 45
+          },
+          "body": {
+            "words": 142,
+            "chars": 1102,
+            "tokens_est": 276
+          }
+        },
+        {
+          "name": "test-engineer",
+          "frontmatter": {
+            "words": 21,
+            "chars": 157,
+            "tokens_est": 39
+          },
+          "body": {
+            "words": 145,
+            "chars": 957,
+            "tokens_est": 239
+          }
+        },
+        {
+          "name": "youtube-master",
+          "frontmatter": {
+            "words": 28,
+            "chars": 191,
+            "tokens_est": 48
+          },
+          "body": {
+            "words": 396,
+            "chars": 2860,
+            "tokens_est": 715
+          }
+        }
+      ]
+    },
+    "commands": {
+      "frontmatter_total": {
+        "files": 6,
+        "words": 138,
+        "chars": 1060,
+        "tokens_est": 265
+      },
+      "body_total": {
+        "files": 6,
+        "words": 540,
+        "chars": 4376,
+        "tokens_est": 1094
+      },
+      "items": [
+        {
+          "name": "audit-security",
+          "frontmatter": {
+            "words": 25,
+            "chars": 185,
+            "tokens_est": 46
+          },
+          "body": {
+            "words": 95,
+            "chars": 749,
+            "tokens_est": 187
+          }
+        },
+        {
+          "name": "create-docs",
+          "frontmatter": {
+            "words": 23,
+            "chars": 167,
+            "tokens_est": 42
+          },
+          "body": {
+            "words": 108,
+            "chars": 820,
+            "tokens_est": 205
+          }
+        },
+        {
+          "name": "generate-tests",
+          "frontmatter": {
+            "words": 26,
+            "chars": 199,
+            "tokens_est": 50
+          },
+          "body": {
+            "words": 89,
+            "chars": 655,
+            "tokens_est": 164
+          }
+        },
+        {
+          "name": "plan-feature",
+          "frontmatter": {
+            "words": 19,
+            "chars": 156,
+            "tokens_est": 39
+          },
+          "body": {
+            "words": 90,
+            "chars": 744,
+            "tokens_est": 186
+          }
+        },
+        {
+          "name": "refactor-module",
+          "frontmatter": {
+            "words": 25,
+            "chars": 176,
+            "tokens_est": 44
+          },
+          "body": {
+            "words": 89,
+            "chars": 729,
+            "tokens_est": 182
+          }
+        },
+        {
+          "name": "review-project",
+          "frontmatter": {
+            "words": 20,
+            "chars": 177,
+            "tokens_est": 44
+          },
+          "body": {
+            "words": 69,
+            "chars": 679,
+            "tokens_est": 170
+          }
+        }
+      ]
+    },
+    "always_loaded_total": {
+      "words": 4800,
+      "chars": 34642,
+      "tokens_est": 8660
+    }
+  },
+  "part_b": {
+    "files_scanned": 181,
+    "malformed_lines": 0,
+    "assistant_lines_in_window": 14391,
+    "assistant_messages_dedup": 6517,
+    "sessions": {
+      "main": 14,
+      "subagents": 163
+    },
+    "messages_by_kind": {
+      "main": 1506,
+      "subagents": 5011
+    },
+    "usage_totals": {
+      "input_tokens": 14088,
+      "cache_creation_input_tokens": 51690309,
+      "cache_read_input_tokens": 1139063777,
+      "output_tokens": 7142349
+    },
+    "by_model": {
+      "claude-opus-5-5": {
+        "messages": 6383,
+        "input_tokens": 13882,
+        "cache_creation_input_tokens": 50839106,
+        "cache_read_input_tokens": 1130525861,
+        "output_tokens": 6914066
+      },
+      "claude-haiku-5-5": {
+        "messages": 100,
+        "input_tokens": 206,
+        "cache_creation_input_tokens": 851203,
+        "cache_read_input_tokens": 8537916,
+        "output_tokens": 228283
+      },
+      "<synthetic>": {
+        "messages": 34,
+        "input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 0,
+        "output_tokens": 0
+      }
+    },
+    "main_per_session": {
+      "input_total": {
+        "n": 14,
+        "median": 7945248.5,
+        "mean": 29917093.9,
+        "p90": 118947982,
+        "min": 385709,
+        "max": 127479713
+      },
+      "output": {
+        "n": 14,
+        "median": 46253.5,
+        "mean": 97148.7,
+        "p90": 289089,
+        "min": 1928,
+        "max": 381982
+      },
+      "calls": {
+        "n": 14,
+        "median": 55.5,
+        "mean": 107.6,
+        "p90": 334,
+        "min": 7,
+        "max": 443
+      }
+    },
+    "initial_context_main": {
+      "n": 14,
+      "median": 54835.5,
+      "min": 45956,
+      "max": 93555
+    },
+    "initial_context_subagents": {
+      "n": 163,
+      "median": 18572,
+      "min": 11493,
+      "max": 73371
+    },
+    "top10_main_by_input": [
+      {
+        "project": "-Users-bea-Workspace-tcc",
+        "session": "325f7835-c797-47e3-8580-5238182772c4",
+        "input_total": 127479713,
+        "calls": 334
+      },
+      {
+        "project": "-Users-bea-workspace-youtube",
+        "session": "cc7aee34-f760-4765-9e0c-12d7a5179128",
+        "input_total": 118947982,
+        "calls": 443
+      },
+      {
+        "project": "-Users-bea-workspace-Projetos-financas",
+        "session": "a79f4740-ad27-4b48-99ac-f3896c1656ba",
+        "input_total": 97556391,
+        "calls": 240
+      },
+      {
+        "project": "-Users-bea-workspace-portfolio",
+        "session": "dd69bca3-04ef-4c2d-b260-8c80f4bd7e77",
+        "input_total": 25279369,
+        "calls": 123
+      },
+      {
+        "project": "-Users-bea-workspace-xadrez",
+        "session": "c45f4d3e-c093-47ac-80d9-8b3148748747",
+        "input_total": 11027074,
+        "calls": 73
+      },
+      {
+        "project": "-Users-bea-Workspace-Lab-inova--o-classifier-prisma",
+        "session": "edb3fc26-ad86-46ec-8d04-b002a226de39",
+        "input_total": 10667987,
+        "calls": 64
+      },
+      {
+        "project": "-Users-bea-Workspace-workflow-claude-codex-etc",
+        "session": "6ac364d3-76d7-4db0-b8e0-53df6e6dc384",
+        "input_total": 8565400,
+        "calls": 50
+      },
+      {
+        "project": "-Users-bea-Workspace-tcc",
+        "session": "a9660e51-0176-4b7f-9d8d-de66c8a9d4d8",
+        "input_total": 7325097,
+        "calls": 61
+      },
+      {
+        "project": "-Users-bea-Workspace-Lab-inova--o-classifier-prisma",
+        "session": "328e5d50-7d8e-4977-93a7-003078accfc1",
+        "input_total": 4855764,
+        "calls": 38
+      },
+      {
+        "project": "-Users-bea-Workspace-workflow-claude-codex-etc",
+        "session": "3189d5fd-9a03-4fbc-9378-08173c07a383",
+        "input_total": 2986217,
+        "calls": 27
+      }
+    ]
+  }
+}

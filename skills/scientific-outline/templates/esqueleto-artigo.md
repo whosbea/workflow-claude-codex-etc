@@ -1,52 +1,34 @@
-# Modelo adaptável de esqueleto científico
+# Esqueleto de artigo
+
+Adapte ao tipo de artigo e remova seções que não se aplicam. Artigo formal troca experimento por prova; estudo sem resultados não simula achados.
 
 ## Identificação
 - Tema:
 - Tipo de artigo:
 - Pergunta principal:
 - Contribuição pretendida:
-- Status do estudo: proposta / coleta / avaliação / concluído
+- Status: proposta / coleta / avaliação / concluído
 
 ## Títulos provisórios
 1.
 2.
 
-## Resumo
-**Função:** apresentar problema, abordagem e evidências efetivamente existentes.
-- Conteúdos:
-- Fonte/evidências:
-- Perguntas geradoras: 2, 17 (se houver resultados; caso contrário, pendente)
+## Seções
 
-## 1. Introdução
-- Contexto, motivação, problema, lacuna verificada, perguntas, objetivos, justificativa.
-- Perguntas: 1, 9, 11, 13, 14.
+Para cada seção: função, tópicos, evidências disponíveis e pendências.
 
-## 2. Trabalhos relacionados e/ou fundamentação
-- Estado da arte, taxonomia, comparação, lacunas e escolhas.
-- Perguntas: 1, 5, 10.
+- **Resumo**: problema, abordagem e evidências existentes. Perguntas 2, 17 (pendentes se não houver resultados).
+- **1. Introdução**: contexto, motivação, problema, lacuna verificada, perguntas, objetivos, justificativa. Perguntas 1, 9, 11, 13, 14.
+- **2. Trabalhos relacionados / fundamentação**: estado da arte, taxonomia, comparação, lacunas e escolhas. Perguntas 1, 5, 10.
+- **3. Método e proposta**: desenho, dados, variáveis, procedimento, alternativas, replicabilidade. Perguntas 3, 12, 15.
+- **4. Resultados / avaliação** (quando houver): métricas, baselines, evidências, casos positivos e negativos. Perguntas 2, 16.
+- **5. Discussão**: interpretação, alternativas, comparações, sensibilidade, validade, limites, transferência. Perguntas 4, 5, 7, 8, 16, 18.
+- **6. Conclusão**: respostas proporcionais às evidências, contribuição e continuidade. Perguntas 6, 17, 19, 20.
+- **Referências**: só fontes reais verificadas; pendências explícitas.
 
-## 3. Método e proposta
-- Desenho, dados, variáveis, procedimento, alternativas, replicabilidade.
-- Perguntas: 3, 12, 15.
+## Matriz das 20 perguntas
 
-## 4. Resultados / avaliação (quando houver)
-- Métricas, baselines, evidências, casos positivos e negativos.
-- Perguntas: 2, 16.
+Uma linha por pergunta; status: atendida / parcial / pendente / não aplicável (justificado).
 
-## 5. Discussão
-- Interpretação, alternativas, comparações, sensibilidade, validade, limites, transferência.
-- Perguntas: 4, 5, 7, 8, 16, 18.
-
-## 6. Conclusão
-- Respostas proporcionais às evidências, contribuição e continuidade.
-- Perguntas: 6, 17, 19, 20.
-
-## Referências
-- Somente fontes reais verificadas; pendências explícitas.
-
-## Matriz obrigatória das 20 perguntas
-| Nº | Seção | Evidência necessária | Estado | Ação |
+| Nº | Seção | Evidência necessária | Status | Próxima ação |
 |---|---|---|---|---|
-| 1–20 | Preencher uma linha para cada número | | | |
-
-**Nota:** Para artigos formais, adaptar “experimento” para provas; para estudos sem resultados, não simular achados. Não aplicar seções mecanicamente.
