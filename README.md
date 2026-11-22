@@ -104,7 +104,7 @@ Para `settings.json` e `config.toml`, o backup é uma cópia do arquivo anterior
 |---|---|---|
 | [mattpocock/skills](https://github.com/mattpocock/skills) | 24 skills de engenharia, produtividade e escrita (`code-review` só no Codex) | Fluxos de TDD, diagnóstico de bug, modelagem de domínio, handoff |
 | [emilkowalski/skills](https://github.com/emilkowalski/skills) | 13 skills | Acabamento de interface e animações |
-| [leonxlnx/taste-skill](https://github.com/leonxlnx/taste-skill) | 13 skills | Evitar cara de template em landing pages e redesigns |
+| [leonxlnx/taste-skill](https://github.com/leonxlnx/taste-skill) | `design-taste-frontend` e `full-output-enforcement`; as outras 11 viraram as skills próprias `design-presets` e `imagegen-design` | Evitar cara de template em landing pages e redesigns |
 | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) | skill `impeccable`, 2 agentes e o motor binário | Criar, criticar e polir telas |
 | [blader/humanizer](https://github.com/blader/humanizer) | `SKILL.md` e `agents/openai.yaml` | Revisar texto que outra pessoa vai ler |
 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | só `ponytail-review`, `ponytail-audit`, `ponytail-debt` | Achar excesso de engenharia e listar comentários `ponytail:` |
@@ -119,6 +119,7 @@ Renomeações e exceções:
 
 - `prototype` do Emil é instalada como `prototype-ui`, porque colide com a `prototype` do Matt.
 - `code-review` do Matt é instalada só no Codex, porque no Claude Code conflita com o `/code-review` nativo.
+- Das skills do taste-skill, 11 foram consolidadas em duas skills próprias para ocupar menos contexto: `skills/design-presets` (minimalist, brutalist, premium, redesign, gpt-taste, stitch, bento) e `skills/imagegen-design` (brandkit, image-to-code, imagegen web e mobile). O texto original fica em `references/` com a licença MIT do upstream; as únicas mudanças são uma referência cruzada corrigida e, do `design-taste-frontend-v1`, só a seção 9 (Motion-Engine Bento), porque o resto já está no v2.
 - A impeccable tem uma variante por ferramenta: `plugin/` para o Claude e `.agents/` para o Codex. No Codex os agentes usam os `.toml` nativos do upstream.
 
 ## Figma MCP (manual)

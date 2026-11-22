@@ -77,19 +77,10 @@ skill emil  skills/review-animations             -             claude,codex
 skill emil  skills/write-swift                   -             claude,codex
 
 # ---------------------------------------------------------------- leonxlnx/taste-skill
-# Destino = "name:" do frontmatter (ex.: soft-skill -> high-end-visual-design).
-skill taste  skills/brandkit                  -  claude,codex
-skill taste  skills/brutalist-skill           -  claude,codex
-skill taste  skills/gpt-tasteskill            -  claude,codex
-skill taste  skills/image-to-code-skill       -  claude,codex
-skill taste  skills/imagegen-frontend-mobile  -  claude,codex
-skill taste  skills/imagegen-frontend-web     -  claude,codex
-skill taste  skills/minimalist-skill          -  claude,codex
+# Destino = "name:" do frontmatter (taste-skill -> design-taste-frontend).
+# As outras 11 skills do repo foram consolidadas em skills/design-presets e
+# skills/imagegen-design (próprias; texto copiado deste commit).
 skill taste  skills/output-skill              -  claude,codex
-skill taste  skills/redesign-skill            -  claude,codex
-skill taste  skills/soft-skill                -  claude,codex
-skill taste  skills/stitch-skill              -  claude,codex
-skill taste  skills/taste-skill-v1            -  claude,codex
 skill taste  skills/taste-skill               -  claude,codex
 
 # ---------------------------------------------------------------- pbakaus/impeccable
