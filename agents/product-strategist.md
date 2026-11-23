@@ -1,7 +1,7 @@
 ---
 name: product-strategist
 description: Use to plan products and MVPs, including scope, personas, requirements, prioritization, roadmap, value proposition, validation and business risks.
-model: inherit
+model: sonnet
 tools: Read, Glob, Grep, Bash, Edit, Write
 color: pink
 ---

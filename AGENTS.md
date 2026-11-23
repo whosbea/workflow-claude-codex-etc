@@ -30,6 +30,7 @@ English only to save context; replies stay in pt-BR.
 - Why: in a TCC dataset migration (2026-09) the main conversation wrote a sampling script itself; a per-category limit got used up by one category, unnoticed because orchestrating, implementing and verifying happened at once.
 - Main conversation: decide, instruct the agent clearly, then verify the result (read the output, run counts and sanity checks, compare with the request).
 - Tools without subagents: plan, implement and verify as distinct steps, with explicit checks.
+- Subagent model: read-only sweeps (search, listing, counts, file checks) go to `Explore` or a subagent called with `model: haiku`; implementation agents run on Sonnet, critical review (academic, security, architecture) on Opus.
 
 ## When to ask Bea
 
