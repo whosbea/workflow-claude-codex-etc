@@ -1,7 +1,7 @@
 ---
 name: devops-infrastructure
 description: Use for infrastructure, cloud, containers, networking, CI/CD, observability, reliability, costs, deploy automation and safe operations.
-model: inherit
+model: sonnet
 tools: Read, Glob, Grep, Bash, Edit, Write
 color: cyan
 ---

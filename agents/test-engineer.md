@@ -1,7 +1,7 @@
 ---
 name: test-engineer
 description: Use to plan, write or review unit, integration, e2e, contract and regression tests, mocks, factories and critical scenarios.
-model: inherit
+model: sonnet
 tools: Read, Glob, Grep, Bash, Edit, Write
 color: green
 ---

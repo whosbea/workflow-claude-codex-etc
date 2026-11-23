@@ -1,7 +1,7 @@
 ---
 name: backend-engineer
 description: Use to design, review or implement backend code (APIs, business rules, validation, databases, auth, integrations, error handling) in the project's own stack.
-model: inherit
+model: sonnet
 tools: Read, Glob, Grep, Bash, Edit, Write
 color: blue
 ---

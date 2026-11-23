@@ -1,7 +1,7 @@
 ---
 name: documentation-writer
 description: Use to create or review READMEs, setup guides, API docs, ADRs, changelogs, contributing guides, manuals, architecture and deploy docs.
-model: inherit
+model: sonnet
 tools: Read, Glob, Grep, Bash, Edit, Write
 color: orange
 ---
