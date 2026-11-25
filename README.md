@@ -98,6 +98,19 @@ mv ~/.workflow-ai-backup/<timestamp>/.claude/CLAUDE.md ~/.claude/CLAUDE.md
 
 Para `settings.json` e `config.toml`, o backup é uma cópia do arquivo anterior: basta copiar de volta com `cp`.
 
+### Antes de instalar skill de terceiros: SkillSpector
+
+O [SkillSpector](https://github.com/NVIDIA/SkillSpector) (NVIDIA, Apache-2.0) é um scanner de segurança de skills. Ele fica fora deste repo, instalado como ferramenta do uv, na versão fixada pelo commit (v2.13.4):
+
+```sh
+uv tool install --python 3.13 "git+https://github.com/NVIDIA/SkillSpector.git@54824463814a0be01360792523ec7245a69190fc"
+skillspector scan <pasta-ou-url-da-skill> --no-llm
+```
+
+O `--no-llm` faz só análise estática, sem gastar tokens. Rode antes de adicionar qualquer skill ao `third-party.lock`.
+
+A nota `DO_NOT_INSTALL` sozinha não decide. Na primeira varredura (2026-11-23, 45 skills já instaladas), todos os alertas HIGH foram falsos positivos: frases "Never ..." lidas como prompt injection e arquivos não analisados por completo marcados como evasão. Leia cada alerta HIGH antes de concluir.
+
 ## Fontes de terceiros
 
 | Repo | O que se usa | Por quê |
